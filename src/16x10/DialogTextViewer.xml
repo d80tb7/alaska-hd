@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="147">
+	<defaultcontrol>61</defaultcontrol>
+
+	<controls>
+
+		<!-- Background -->
+
+		<include>Global_Background</include>
+
+		<!-- Menu -->
+
+		<control type="group" id="5000">
+			<posy>Offset_Value</posy>
+			<include>Animation_ZoomInMenu</include>
+
+			<!-- Heading label -->
+
+			<control type="label" id="1">
+				<posx>544</posx>
+				<posy>154</posy>
+				<width>1254</width>
+				<height>44</height>
+				<font>Font_Reg_Caps_Bold_44</font>
+				<textcolor>$VAR[AltListTitleF]</textcolor>
+			</control>
+
+			<!-- Info -->
+
+			<control type="textbox" id="5">
+				<posx>544</posx>
+				<posy>228</posy>
+				<width>839</width>
+				<height>580</height>
+				<font>Font_Reg_44</font>
+				<textcolor>Light</textcolor>
+				<pagecontrol>61</pagecontrol>
+				<autoscroll delay="8000" time="2000" repeat="12000">True</autoscroll>
+			</control>
+
+			<!-- Scrollbar -->
+
+			<control type="scrollbar" id="61">
+				<posx>544</posx>
+				<posy>228</posy>
+				<width>839</width>
+				<height>580</height>
+				<onleft>Close</onleft>
+				<onright>Close</onright>
+				<ondown>61</ondown>
+				<onup>61</onup>
+				<texturesliderbackground>-</texturesliderbackground>
+				<texturesliderbar>-</texturesliderbar>
+				<texturesliderbarfocus>-</texturesliderbarfocus>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

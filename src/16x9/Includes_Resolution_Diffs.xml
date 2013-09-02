@@ -1,0 +1,88 @@
+<includes>	
+
+	<constant name="Offset_Value">0</constant>	
+
+	<include name="Dimensions_Fullscreen">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1920</width>
+		<height>1080</height>
+		<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
+	</include>
+
+	<include name="List_Filter">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="special://skin/backgrounds/filters/List_Filter_1080.png">$VAR[Background_Image]</texture>
+		</control>
+	</include>
+
+	<include name="List_Fanart_Diffuse">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			<texture background="true" diffuse="special://skin/backgrounds/filters/List_Filter_1080.png">$INFO[ListItem.Art(fanart)]</texture>
+			<include>Animation_CommonFade</include>
+		</control>
+	</include>
+
+	<include name="List_Pictures_Diffuse">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			<texture background="true" diffuse="special://skin/backgrounds/filters/List_Filter_1080.png">$INFO[ListItem.FileNameAndPath]</texture>
+			<include>Animation_CommonFade</include>
+		</control>
+	</include>
+
+	<include name="File_List_Filter">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="special://skin/backgrounds/filters/File_List_Filter_1080.png">$VAR[Background_Image]</texture>
+		</control>
+	</include>
+
+	<include name="File_List_Pictures_Diffuse">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			<texture background="true" diffuse="special://skin/backgrounds/filters/File_List_Filter_1080.png">$INFO[ListItem.FileNameAndPath]</texture>
+			<include>Animation_CommonFade</include>
+		</control>
+	</include>
+
+	<include name="Wall_Fanart_Diffuse">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			<texture background="true" diffuse="special://skin/backgrounds/filters/Wall_Filter_1080.png">$INFO[ListItem.Art(fanart)]</texture>
+			<include>Animation_CommonFade</include>
+		</control>
+	</include>
+
+	<include name="Video_List_Filter">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="special://skin/backgrounds/filters/Video_List_Filter_1080.png">$VAR[Background_Image]</texture>
+		</control>
+	</include>
+
+	<include name="Wall_Filter">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="special://skin/backgrounds/filters/Wall_Filter_1080.png">$VAR[Background_Image]</texture>
+		</control>
+	</include>
+
+	<include name="Settings_Filter">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="special://skin/backgrounds/filters/Settings_Filter_1080.png">$VAR[Background_Image]</texture>
+		</control>
+	</include>
+
+</includes>

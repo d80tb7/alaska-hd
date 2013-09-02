@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="123">
+	<defaultcontrol always="true">5</defaultcontrol>
+
+	<controls>
+
+		<!-- Menu -->
+
+		<control type="group" id="5000">
+			<posy>Offset_Value</posy>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_ZoomInZoomOut</include>
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
+
+			<!-- Heading label -->
+
+			<control type="label" id="2">
+				<posx>544</posx>
+				<posy>154</posy>
+				<width>1254</width>
+				<height>44</height>
+				<font>Font_Reg_Caps_Bold_44</font>
+				<textcolor>OSDButtonNF</textcolor>
+			</control>
+
+			<!-- Grouplist -->
+
+			<control type="grouplist" id="5">
+				<posx>544</posx>
+				<posy>228</posy>
+				<width>1260</width>
+				<height>594</height>
+				<itemgap>0</itemgap>
+				<onleft>close</onleft>
+				<onright>close</onright>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<orientation>vertical</orientation>
+				<scrolltime tween="sine" easing="out">320</scrolltime>
+			</control>
+
+			<!-- List arrows -->
+
+			<control type="image">
+				<posx>566</posx>
+				<posy>206</posy>
+				<width>32</width>
+				<height>16</height>
+				<texture>common/Scroll_Up_OSD.png</texture>
+				<visible>Container(5).HasPrevious</visible>
+			</control>
+
+			<control type="image">
+				<posx>566</posx>
+				<posy>828</posy>
+				<width>32</width>
+				<height>16</height>
+				<texture>common/Scroll_Down_OSD.png</texture>
+				<visible>Container(5).HasNext</visible>
+			</control>
+
+			<control type="button" id="7">
+				<textcolor>OSDButtonNF</textcolor>
+				<focusedcolor>OSDLabelFO</focusedcolor>
+				<texturefocus>common/OSDButton.png</texturefocus>
+			</control>
+
+			<control type="radiobutton" id="8">
+				<textcolor>OSDButtonNF</textcolor>
+				<focusedcolor>OSDLabelFO</focusedcolor>
+				<texturefocus>common/OSDButton.png</texturefocus>
+			</control>
+
+			<control type="spincontrolex" id="9">
+				<textcolor>OSDButtonNF</textcolor>
+				<focusedcolor>OSDLabelFO</focusedcolor>
+				<texturefocus>common/OSDButton.png</texturefocus>
+			</control>
+
+			<control type="sliderex" id="10">
+				<textcolor>OSDButtonNF</textcolor>
+				<focusedcolor>OSDLabelFO</focusedcolor>
+				<texturefocus>common/OSDButton.png</texturefocus>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<zorder>2</zorder>
+
+	<controls>
+
+		<control type="group">
+			<posx>1010</posx>
+			<posy>46</posy>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="slide" start="0,-180" end="0,0" time="400" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="400" />
+			</animation>
+			<animation type="Conditional" condition="Window.IsVisible(fullscreeninfo) | Window.IsVisible(seekbar) | [Window.IsVisible(visualisation) + Player.ShowInfo]" reversible="true">
+				<effect type="slide" start="0,0" end="0,95" time="400" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="100" />
+			</animation>
+			<visible>!Window.IsVisible(volumebar) + !Window.IsVisible(infodialog) + !Window.IsVisible(busydialog)</visible>
+
+			<!-- Heading -->
+
+			<control type="label" id="30">
+				<description>Heading Label</description>
+				<posx>775</posx>
+				<posy>6</posy>
+				<width>775</width>
+				<height>30</height>
+				<align>right</align>
+				<scroll>true</scroll>
+				<font>Font_Black_Caps_30</font>
+				<textcolor>$VAR[DialogHeadingValue]</textcolor>
+			</control>
+
+			<!-- Details -->
+
+			<control type="label" id="31">
+				<posx>775</posx>
+				<posy>36</posy>
+				<width>775</width>
+				<height>30</height>
+				<align>right</align>
+				<scroll>true</scroll>
+				<haspath>true</haspath>
+				<font>Font_Light_Caps_30</font>
+				<textcolor>$VAR[DialogDetailsValue]</textcolor>
+			</control>
+
+			<!-- Background image -->
+
+			<control type="image">
+				<posx>792</posx>
+				<posy>0</posy>
+				<width>75</width>
+				<height>75</height>
+				<texture>dialogs/Dialog_Back.png</texture>
+			</control>
+
+			<!-- Progress -->
+
+			<control type="progress" id="32">
+				<description>Progressbar</description>
+				<posx>806</posx>
+				<posy>20</posy>
+				<width>48</width>
+				<height>38</height>
+				<texturebg>dialogs/Clear.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>dialogs/Progress_Bar.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<animation effect="rotate" center="auto" end="-90" time="0" condition="true">Conditional</animation>
+			</control>
+
+			<!-- Overlay -->
+
+			<control type="image">
+				<posx>792</posx>
+				<posy>0</posy>
+				<width>75</width>
+				<height>75</height>
+				<texture>dialogs/Scan_Progress.png</texture>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

@@ -1,0 +1,18 @@
+<project>
+    <target name="clean">
+        <delete dir="dist"/>
+	<delete dir="build"/>
+    </target>
+
+
+    <target name="compile">
+        <mkdir dir="dist"/>
+	<mkdir dir="build"/>
+	<copy todir="build/skin.alaska.hd">
+           <fileset dir="src"/>
+        </copy>
+	<zip destfile="dist/skin.alaska.hd.zip"
+       		basedir="build/skin.alaska.hd"/>
+    </target>
+ 
+</project>

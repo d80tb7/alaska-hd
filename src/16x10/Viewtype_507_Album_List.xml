@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<include name="Viewtype_507_Album_List">
+
+		<control type="group">
+
+			<visible>Control.IsVisible(507)</visible>
+
+			<!-- Browser -->
+
+			<control type="group" id="5000">
+				<posy>Offset_Value</posy>
+				<include>Animation_ZoomInZoomOut</include>
+				<include>Animation_ZoomedByMenu</include>
+				<include>Animation_HiddenByInfo</include>
+
+				<control type="fixedlist" id="507">
+					<posx>525</posx>
+					<posy>135</posy>
+					<height>748</height>
+					<width>1330</width>
+					<onup>507</onup>
+					<ondown>507</ondown>
+					<onleft>7000</onleft>
+					<onright>7000</onright>
+					<focusposition>4</focusposition>
+					<orientation>vertical</orientation>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="sine" easing="out">320</scrolltime>
+					<visible>Container.Content(Albums)</visible>
+
+					<itemlayout width="1328" height="74">
+						<control type="label">
+							<posx>136</posx>
+							<posy>0</posy>
+							<width>1194</width>
+							<height>74</height>
+							<aligny>center</aligny>
+							<font>Font_ListTitleNF</font>
+							<textcolor>ListTitleNF</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>SubString(ListItem.Icon,Default)</visible>
+						</control>
+						<control type="group">
+							<visible>!SubString(ListItem.Icon,Default)</visible>
+							<control type="label">
+								<posx>136</posx>
+								<posy>4</posy>
+								<width>1245</width>
+								<height>38</height>
+								<aligny>center</aligny>
+								<font>Font_ListTitleNF</font>
+								<textcolor>ListTitleNF</textcolor>
+								<label>$INFO[ListItem.Album]</label>
+							</control>
+							<control type="label">
+								<posx>136</posx>
+								<posy>39</posy>
+								<width>1245</width>
+								<height>26</height>
+								<aligny>center</aligny>
+								<font>Font_ListDetailNF</font>
+								<textcolor>ListTitleNF</textcolor>
+								<label>$INFO[ListItem.Artist]$VAR[Album_Insert]$INFO[ListItem.Year]</label>
+								<visible>!SubString(ListItem.Icon,Default)</visible>
+							</control>
+						</control>
+					</itemlayout>
+
+					<focusedlayout width="1242" height="156">
+						<control type="group">
+							<visible>SubString(ListItem.Icon,Default)</visible>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>156</width>
+								<height>156</height>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" center="78,78" start="50" end="100" time="200" tween="cubic" easing="out" />
+									<effect type="fade" start="0" end="100" time="200" />
+								</animation>
+							</control>
+							<control type="label">
+								<posx>180</posx>
+								<posy>0</posy>
+								<width>1150</width>
+								<height>156</height>
+								<aligny>center</aligny>
+								<font>Font_ListTitleBig</font>
+								<textcolor>ListTitleF</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<animation type="Focus" reversible="false">
+									<effect type="fade" start="0" end="100" time="200" />
+								</animation>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!SubString(ListItem.Icon,Default)</visible>
+							<control type="group">
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" center="78,78" start="50" end="100" time="200" tween="cubic" easing="out" />
+									<effect type="fade" start="0" end="100" time="200" />
+								</animation>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>156</width>
+									<height>156</height>
+									<texture>list/listframe.png</texture>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>118</width>
+									<height>118</height>
+									<texture diffuse="list/listmatte.png">$INFO[ListItem.Icon]</texture>
+									<aspectratio scalediffuse="false">stretch</aspectratio>
+								</control>
+							</control>
+							<control type="group">
+								<animation type="Focus" reversible="false">
+									<effect type="fade" start="0" end="100" time="200" />
+								</animation>
+								<control type="label">
+									<posx>180</posx>
+									<posy>24</posy>
+									<width>1150</width>
+									<height>38</height>
+									<aligny>center</aligny>
+									<font>Font_ListTitle</font>
+									<textcolor>ListTitleF</textcolor>
+									<label>$INFO[ListItem.Album]</label>
+								</control>
+								<control type="label">
+									<posx>180</posx>
+									<posy>63</posy>
+									<width>1150</width>
+									<height>26</height>
+									<aligny>center</aligny>
+									<font>Font_ListDetail</font>
+									<textcolor>ListTitleF</textcolor>
+									<label>$INFO[ListItem.Artist]$VAR[Album_Insert]$INFO[ListItem.Year]</label>
+								</control>
+								<control type="image">
+									<posx>180</posx>
+									<posy>93</posy>
+									<width>182</width>
+									<height>33</height>
+									<texture>$INFO[ListItem.StarRating]</texture>
+								</control>
+							</control>
+						</control>
+					</focusedlayout>
+
+				</control>
+
+			</control>
+
+			<!-- Filter -->
+
+			<include>List_Filter</include>
+
+			<control type="group">
+				<include>List_Fanart_Diffuse</include>
+				<visible>!Skin.HasSetting(Disable_Music_Fanart) + Window.IsVisible(musiclibrary)</visible>
+			</control>
+
+		</control>
+
+	</include>
+
+</includes>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="106">
+	<defaultcontrol always="true">1000</defaultcontrol>
+	<onload>Control.Message(7000,close,videolibrary)</onload>
+	<coordinates>
+		<origin x="0" y="0"/>
+	</coordinates>
+
+	<controls>
+
+		<!-- Default controls (hidden) -->
+
+		<control type="grouplist" id="996">
+			<include>HiddenControl</include>
+			<control type="button" id="990">
+				<include>HiddenControl</include>
+				<onleft>Close</onleft>
+				<onright>Close</onright>
+				<onclick>XBMC.PlayMedia($ESCINFO[ListItem.Trailer],noresume)</onclick>
+				<visible>!IsEmpty(ListItem.Trailer)</visible>
+			</control>
+			<control type="button" id="1000">
+				<include>HiddenControl</include>
+				<onleft>Close</onleft>
+				<onright>Close</onright>
+			</control>
+		</control>
+
+		<!-- Filter -->
+
+		<include>Global_DialogFilter</include>
+
+		<!-- Menu -->
+
+		<control type="group">
+			<posy>Offset_Value</posy>
+
+			<control type="grouplist">
+				<posx>160</posx>
+				<posy>466</posy>
+				<width>1600</width>
+				<height>836</height>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<include>Animation_ZoomInMenu</include>
+				<include>Animation_ContextMenuSlide</include>
+				<scrolltime tween="sine" easing="out">320</scrolltime>
+				<control type="label">
+					<include>ContextMenuValue</include>
+					<label>20410</label>
+					<visible>Control.IsVisible(990)</visible>
+					<animation type="conditional" condition="!ControlGroup(996).HasFocus(990)">
+						<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+						<effect type="fade" start="100" end="50" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<include>ContextMenuValue</include>
+					<label>$INFO[Control.GetLabel(1001)]</label>
+					<visible>Control.IsVisible(1001)</visible>
+					<animation type="conditional" condition="!ControlGroup(996).HasFocus(1001)">
+						<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+						<effect type="fade" start="100" end="50" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<include>ContextMenuValue</include>
+					<label>$INFO[Control.GetLabel(1002)]</label>
+					<visible>Control.IsVisible(1002)</visible>
+					<animation type="conditional" condition="!ControlGroup(996).HasFocus(1002)">
+						<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+						<effect type="fade" start="100" end="50" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<include>ContextMenuValue</include>
+					<label>$INFO[Control.GetLabel(1003)]</label>
+					<visible>Control.IsVisible(1003)</visible>
+					<animation type="conditional" condition="!ControlGroup(996).HasFocus(1003)">
+						<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+						<effect type="fade" start="100" end="50" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<include>ContextMenuValue</include>
+					<label>$INFO[Control.GetLabel(1004)]</label>
+					<visible>Control.IsVisible(1004)</visible>
+					<animation type="conditional" condition="!ControlGroup(996).HasFocus(1004)">
+						<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+						<effect type="fade" start="100" end="50" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<include>ContextMenuValue</include>
+					<label>$INFO[Control.GetLabel(1005)]</label>
+					<visible>Control.IsVisible(1005)</visible>
+					<animation type="conditional" condition="!ControlGroup(996).HasFocus(1005)">
+						<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+						<effect type="fade" start="100" end="50" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<include>ContextMenuValue</include>
+					<label>$INFO[Control.GetLabel(1006)]</label>
+					<visible>Control.IsVisible(1006)</visible>
+					<animation type="conditional" condition="!ControlGroup(996).HasFocus(1006)">
+						<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+						<effect type="fade" start="100" end="50" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<include>ContextMenuValue</include>
+					<label>$INFO[Control.GetLabel(1007)]</label>
+					<visible>Control.IsVisible(1007)</visible>
+					<animation type="conditional" condition="!ControlGroup(996).HasFocus(1007)">
+						<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+						<effect type="fade" start="100" end="50" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<include>ContextMenuValue</include>
+					<label>$INFO[Control.GetLabel(1008)]</label>
+					<visible>Control.IsVisible(1008)</visible>
+					<animation type="conditional" condition="!ControlGroup(996).HasFocus(1008)">
+						<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+						<effect type="fade" start="100" end="50" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<include>ContextMenuValue</include>
+					<label>$INFO[Control.GetLabel(1009)]</label>
+					<visible>Control.IsVisible(1009)</visible>
+					<animation type="conditional" condition="!ControlGroup(996).HasFocus(1009)">
+						<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+						<effect type="fade" start="100" end="50" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<include>ContextMenuValue</include>
+					<label>$INFO[Control.GetLabel(1010)]</label>
+					<visible>Control.IsVisible(1010)</visible>
+					<animation type="conditional" condition="!ControlGroup(996).HasFocus(1010)">
+						<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+						<effect type="fade" start="100" end="50" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<include>ContextMenuValue</include>
+					<label>$INFO[Control.GetLabel(1011)]</label>
+					<visible>Control.IsVisible(1011)</visible>
+					<animation type="conditional" condition="!ControlGroup(996).HasFocus(1011)">
+						<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+						<effect type="fade" start="100" end="50" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<include>ContextMenuValue</include>
+					<label>$INFO[Control.GetLabel(1012)]</label>
+					<visible>Control.IsVisible(1012)</visible>
+					<animation type="conditional" condition="!ControlGroup(996).HasFocus(1012)">
+						<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+						<effect type="fade" start="100" end="50" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<include>ContextMenuValue</include>
+					<label>$INFO[Control.GetLabel(1013)]</label>
+					<visible>Control.IsVisible(1013)</visible>
+					<animation type="conditional" condition="!ControlGroup(996).HasFocus(1013)">
+						<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+						<effect type="fade" start="100" end="50" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<include>ContextMenuValue</include>
+					<label>$INFO[Control.GetLabel(1014)]</label>
+					<visible>Control.IsVisible(1014)</visible>
+					<animation type="conditional" condition="!ControlGroup(996).HasFocus(1014)">
+						<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+						<effect type="fade" start="100" end="50" time="200" />
+					</animation>
+				</control>
+			</control>
+
+		</control>
+
+		<!-- Filter -->
+
+		<control type="group">
+			<include>Animation_CommonFade</include>
+			<include>List_Filter</include>
+		</control>
+
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>$VAR[Background_Image]</texture>
+			<visible>Window.IsActive(shutdownmenu) | Window.IsActive(FileBrowser) | Window.IsActive(progressdialog) | Window.IsActive(okdialog)</visible>
+			<colordiffuse>FilterDiffuse</colordiffuse>
+			<animation effect="fade" end="100" start="0" time="200">Visible</animation>
+			<animation effect="fade" end="0" start="100" time="400">Hidden</animation>
+		</control>
+
+	</controls>
+
+</window>

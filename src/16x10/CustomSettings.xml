@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="56">
+	<backgroundcolor>0</backgroundcolor>
+	<defaultcontrol always="true">5000</defaultcontrol>
+
+	<controls>
+
+		<!-- Background -->
+
+		<include>Global_Background</include>
+
+		<!-- Menu -->
+
+		<control type="group" id="5000">
+			<posy>Offset_Value</posy>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_ZoomInZoomOut</include>
+
+			<control type="grouplist" id="100">
+				<description>Control Area</description>
+				<posx>400</posx>
+				<posy>210</posy>
+				<width>1120</width>
+				<height>594</height>
+				<itemgap>0</itemgap>
+				<onleft>7000</onleft>
+				<onright>7000</onright>
+				<onup>7000</onup>
+				<ondown>7000</ondown>
+				<orientation>vertical</orientation>
+				<visible>Container(7000).Hasfocus(1)</visible>
+				<scrolltime tween="sine" easing="out">320</scrolltime>
+
+				<control type="togglebutton" id="101">
+					<description>Background image</description>
+					<width>1120</width>
+					<label>Set Background image</label>
+					<altlabel>Background image</altlabel>
+					<onclick>Skin.Reset(Background_Image)</onclick>
+					<onclick>Skin.SetImage(Background_Image)</onclick>
+					<usealttexture>!IsEmpty(Skin.String(Background_Image))</usealttexture>
+				</control>
+
+				<control type="radiobutton" id="102">
+					<description>Movie Fanart</description>
+					<width>1120</width>
+					<label>Disable Movie Fanart</label>
+					<onclick>Skin.ToggleSetting(Disable_Movie_Fanart)</onclick>
+					<selected>Skin.HasSetting(Disable_Movie_Fanart)</selected>
+				</control>
+
+				<control type="radiobutton" id="103">
+					<description>TV Fanart</description>
+					<width>1120</width>
+					<label>Disable TV Fanart</label>
+					<onclick>Skin.ToggleSetting(Disable_TV_Fanart)</onclick>
+					<selected>Skin.HasSetting(Disable_TV_Fanart)</selected>
+				</control>
+
+				<control type="radiobutton" id="104">
+					<description>Music Fanart</description>
+					<width>1120</width>
+					<label>Disable Music Fanart</label>
+					<onclick>Skin.ToggleSetting(Disable_Music_Fanart)</onclick>
+					<selected>Skin.HasSetting(Disable_Music_Fanart)</selected>
+				</control>
+
+				<control type="radiobutton" id="105">
+					<description>Addon Fanart</description>
+					<width>1120</width>
+					<label>Disable Addon Fanart</label>
+					<onclick>Skin.ToggleSetting(Disable_Addon_Fanart)</onclick>
+					<selected>Skin.HasSetting(Disable_Addon_Fanart)</selected>
+				</control>
+
+			</control>
+
+			<control type="group">
+				<visible>Container(7000).Hasfocus(1)</visible>
+
+				<control type="label">
+					<posx>1500</posx>
+					<posy>210</posy>
+					<width>800</width>
+					<height>66</height>
+					<align>right</align>
+					<haspath>true</haspath>
+					<font>Font_SettingsLabel_F</font>
+					<textcolor>SettingLabel_F</textcolor>
+					<label>$INFO[Skin.String(Background_Image)]</label>
+					<visible>Control.Hasfocus(101)</visible>
+				</control>
+
+				<control type="label">
+					<posx>1500</posx>
+					<posy>210</posy>
+					<width>800</width>
+					<height>66</height>
+					<align>right</align>
+					<haspath>true</haspath>
+					<font>Font_SettingsLabel_F</font>
+					<textcolor>SettingLabel_NF</textcolor>
+					<label>$INFO[Skin.String(Background_Image)]</label>
+					<visible>!Control.Hasfocus(101)</visible>
+				</control>
+
+			</control>
+
+			<control type="grouplist" id="200">
+				<description>Control Area</description>
+				<posx>400</posx>
+				<posy>210</posy>
+				<width>1120</width>
+				<height>594</height>
+				<itemgap>0</itemgap>
+				<onleft>7000</onleft>
+				<onright>7000</onright>
+				<onup>7000</onup>
+				<ondown>7000</ondown>
+				<orientation>vertical</orientation>
+				<visible>Container(7000).Hasfocus(2)</visible>
+				<scrolltime tween="sine" easing="out">320</scrolltime>
+
+				<control type="radiobutton" id="201">
+					<description>RSS Home Only</description>
+					<width>1120</width>
+					<label>Disable Global RSS</label>
+					<onclick>Skin.ToggleSetting(Disable_Global_RSS)</onclick>
+					<selected>Skin.HasSetting(Disable_Global_RSS)</selected>
+				</control>
+
+				<control type="radiobutton" id="202">
+					<description>Swap Studio flag for Rating</description>
+					<width>1120</width>
+					<label>Swap Studio flag for Rating</label>
+					<onclick>Skin.ToggleSetting(SwapStudio_Rating)</onclick>
+					<selected>Skin.HasSetting(SwapStudio_Rating)</selected>
+				</control>
+
+				<control type="radiobutton" id="203">
+					<description>Open Playlists via Favourites (Default: Play)</description>
+					<width>1120</width>
+					<label>Open Playlists via Favourites submenu (Default: Play)</label>
+					<onclick>Skin.ToggleSetting(OpenFavouritesPlaylist)</onclick>
+					<selected>Skin.HasSetting(OpenFavouritesPlaylist)</selected>
+				</control>
+
+			</control>
+
+			<control type="grouplist" id="300">
+				<description>Control Area</description>
+				<posx>400</posx>
+				<posy>210</posy>
+				<width>1120</width>
+				<height>594</height>
+				<itemgap>0</itemgap>
+				<onleft>7000</onleft>
+				<onright>7000</onright>
+				<onup>7000</onup>
+				<ondown>7000</ondown>
+				<orientation>vertical</orientation>
+				<visible>Container(7000).Hasfocus(3)</visible>
+				<scrolltime tween="sine" easing="out">320</scrolltime>
+
+				<control type="button" id="301">
+					<description>Default Button</description>
+					<width>1120</width>
+					<label>31025</label>
+					<onclick>Skin.SetAddon(LyricAddon,xbmc.python.lyrics)</onclick>
+				</control>
+
+				<control type="button" id="302">
+					<description>Default Button</description>
+					<width>1120</width>
+					<label>31026</label>
+					<onclick>Skin.SetAddon(SubtitleAddon,xbmc.python.subtitles)</onclick>
+				</control>
+
+			</control>
+
+			<control type="group">
+				<visible>Container(7000).Hasfocus(3)</visible>
+
+				<control type="label">
+					<posx>1500</posx>
+					<posy>210</posy>
+					<width>800</width>
+					<height>66</height>
+					<align>right</align>
+					<haspath>true</haspath>
+					<font>Font_SettingsLabel_F</font>
+					<textcolor>SettingLabel_F</textcolor>
+					<label>$VAR[LyricAddonLabel]</label>
+					<visible>Control.Hasfocus(301)</visible>
+				</control>
+
+				<control type="label">
+					<posx>1500</posx>
+					<posy>210</posy>
+					<width>800</width>
+					<height>66</height>
+					<align>right</align>
+					<haspath>true</haspath>
+					<font>Font_SettingsLabel_F</font>
+					<textcolor>SettingLabel_NF</textcolor>
+					<label>$VAR[LyricAddonLabel]</label>
+					<visible>!Control.Hasfocus(301)</visible>
+				</control>
+
+				<control type="label">
+					<posx>1500</posx>
+					<posy>276</posy>
+					<width>800</width>
+					<height>66</height>
+					<align>right</align>
+					<haspath>true</haspath>
+					<font>Font_SettingsLabel_F</font>
+					<textcolor>SettingLabel_F</textcolor>
+					<label>$VAR[SubtitleAddonLabel]</label>
+					<visible>Control.Hasfocus(302)</visible>
+				</control>
+
+				<control type="label">
+					<posx>1500</posx>
+					<posy>276</posy>
+					<width>800</width>
+					<height>66</height>
+					<align>right</align>
+					<haspath>true</haspath>
+					<font>Font_SettingsLabel_F</font>
+					<textcolor>SettingLabel_NF</textcolor>
+					<label>$VAR[SubtitleAddonLabel]</label>
+					<visible>!Control.Hasfocus(302)</visible>
+				</control>
+
+			</control>
+
+			<control type="grouplist" id="500">
+				<description>Control Area</description>
+				<posx>400</posx>
+				<posy>210</posy>
+				<width>1120</width>
+				<height>594</height>
+				<itemgap>0</itemgap>
+				<onleft>7000</onleft>
+				<onright>7000</onright>
+				<onup>7000</onup>
+				<ondown>7000</ondown>
+				<orientation>vertical</orientation>
+				<visible>Container(7000).Hasfocus(4)</visible>
+				<scrolltime tween="sine" easing="out">320</scrolltime>
+
+				<control type="radiobutton" id="501">
+					<description>Enable Debug Grid</description>
+					<width>1120</width>
+					<label>31034</label>
+					<onclick>Skin.ToggleSetting(DebugGrid)</onclick>
+					<selected>Skin.HasSetting(DebugGrid)</selected>
+				</control>
+
+				<control type="radiobutton" id="502">
+					<description>Disable Debug Info</description>
+					<width>1120</width>
+					<label>31035</label>
+					<onclick>Skin.ToggleSetting(HideDebugInfo)</onclick>
+					<selected>Skin.HasSetting(HideDebugInfo)</selected>
+				</control>
+
+			</control>
+
+		</control>
+
+		<!-- Filter -->
+
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>$VAR[backgroundimage]</texture>
+			<visible>Control.HasFocus(7000)</visible>
+			<colordiffuse>FilterDiffuse</colordiffuse>
+			<animation effect="fade" end="100" start="0" time="200">Visible</animation>
+			<animation effect="fade" end="0" start="100" time="400">Hidden</animation>
+		</control>
+
+		<!-- Menu -->
+
+		<control type="group">
+			<posy>Offset_Value</posy>
+
+			<control type="wraplist" id="7000">
+				<posx>-290</posx>
+				<posy>452</posy>
+				<width>2500</width>
+				<height>76</height>
+				<onup>5000</onup>
+				<ondown>5000</ondown>
+				<viewtype>list</viewtype>
+				<focusposition>2</focusposition>
+				<defaultcontrol>1</defaultcontrol>
+				<orientation>horizontal</orientation>
+				<include>Animation_ZoomInMenu</include>
+				<scrolltime tween="sine" easing="out">320</scrolltime>
+				<visible allowhiddenfocus="true">Control.HasFocus(7000)</visible>
+				<itemlayout width="440" height="44">
+					<control type="label">
+						<posx>220</posx>
+						<posy>16</posy>
+						<width>440</width>
+						<align>center</align>
+						<height>44</height>
+						<info>ListItem.Label</info>
+						<font>Font_MenuValue_NF</font>
+						<textcolor>MenuValue_NF</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout width="740" height="76">
+					<control type="label">
+						<posx>370</posx>
+						<posy>0</posy>
+						<width>740</width>
+						<height>76</height>
+						<align>center</align>
+						<info>ListItem.Label</info>
+						<font>Font_MenuValue_F</font>
+						<textcolor>MenuValue_F</textcolor>
+					</control>
+				</focusedlayout>
+				<content>
+
+					<item id="1">
+						<description>Fanart</description>
+						<label>Backgrounds</label>
+						<onclick>SetFocus(5000)</onclick>
+					</item>
+
+					<item id="2">
+						<description>Look</description>
+						<label>Look Settings</label>
+						<onclick>SetFocus(5000)</onclick>
+					</item>
+
+					<item id="3">
+						<description>Lyrics/Subtitles</description>
+						<label>31017</label>
+						<onclick>SetFocus(5000)</onclick>
+					</item>
+
+					<item id="4">
+						<description>Debug</description>
+						<label>31033</label>
+						<onclick>SetFocus(5000)</onclick>
+					</item>
+
+				</content>
+
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

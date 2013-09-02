@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<default type="label">
+		<posx>0</posx>
+		<posy>0</posy>
+		<label>-</label>
+		<height>66</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>Small</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<selectedcolor>SelectedColour</selectedcolor>
+		<disabledcolor>DisabledColour</disabledcolor>
+		<scrollspeed>40</scrollspeed>
+		<scrollsuffix>   |   </scrollsuffix>
+	</default>
+
+	<default type="fadelabel">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>66</height>
+		<label>-</label>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>Small</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<selectedcolor>SelectedColour</selectedcolor>
+		<disabledcolor>DisabledColour</disabledcolor>
+		<scrollout>false</scrollout>
+		<scrollspeed>40</scrollspeed>
+		<pauseatend>2000</pauseatend>
+	</default>
+
+	<default type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>-</width>
+		<height>-</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texture>-</texture>
+	</default>
+
+	<default type="button">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>400</width>
+		<height>66</height>
+		<aligny>center</aligny>
+		<font>Font_Reg_44</font>
+		<label>-</label>
+		<textoffsetx>20</textoffsetx>
+		<textcolor>Light</textcolor>
+		<focusedcolor>ButtonLabel</focusedcolor>
+		<disabledcolor>DisabledColour</disabledcolor>
+		<texturefocus>common/Button_FO.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</default>
+
+	<default type="togglebutton">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>400</width>
+		<height>66</height>
+		<label>-</label>
+		<textoffsetx>20</textoffsetx>
+		<font>Font_Reg_44</font>
+		<textcolor>Light</textcolor>
+		<focusedcolor>ButtonLabel</focusedcolor>
+		<disabledcolor>DisabledColour</disabledcolor>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>common/Button_FO.png</texturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<alttexturefocus>common/Button_FO.png</alttexturefocus>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+
+	<default type="radiobutton">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>400</width>
+		<height>66</height>
+		<aligny>center</aligny>
+		<font>Font_Reg_44</font>
+		<label>-</label>
+		<textcolor>Light</textcolor>
+		<focusedcolor>ButtonLabel</focusedcolor>
+		<disabledcolor>DisabledColour</disabledcolor>
+		<radiowidth>95</radiowidth>
+		<radioheight>66</radioheight>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>common/Button_FO.png</texturefocus>
+		<textureradiofocus>common/Radio_FO.png</textureradiofocus>
+		<textureradionofocus>common/Radio_NF.png</textureradionofocus>
+		<textoffsetx>20</textoffsetx>
+		<pulseonselect>false</pulseonselect>
+	</default>
+
+	<default type="spincontrolex">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>400</width>
+		<height>66</height>
+		<label>-</label>
+		<font>Font_Reg_44</font>
+		<spinwidth>35</spinwidth>
+		<spinheight>66</spinheight>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>common/Button_FO.png</texturefocus>
+		<textureup>common/Arrow_Up_NF.png</textureup>
+		<texturedown>common/Arrow_Down_NF.png</texturedown>
+		<textureupfocus>common/Arrow_Up_FO.png</textureupfocus>
+		<texturedownfocus>common/Arrow_Down_FO.png</texturedownfocus>
+		<textcolor>Light</textcolor>
+		<focusedcolor>ButtonLabel</focusedcolor>
+		<disabledcolor>DisabledColour</disabledcolor>
+		<textoffsetx>20</textoffsetx>
+		<aligny>center</aligny>
+		<reverse>yes</reverse>
+		<pulseonselect>false</pulseonselect>
+	</default>
+
+	<default type="spincontrol">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>66</height>
+		<width>66</width>
+		<spinwidth>43</spinwidth>
+		<spinheight>60</spinheight>
+		<textureup>common/Arrow_Up_NF.png</textureup>
+		<texturedown>common/Arrow_Down_NF.png</texturedown>
+		<textureupfocus>common/Arrow_Up_FO.png</textureupfocus>
+		<texturedownfocus>common/Arrow_Down_FO.png</texturedownfocus>
+		<font>Font_Reg_44</font>
+		<textcolor>Light</textcolor>
+		<focusedcolor>ButtonLabel</focusedcolor>
+		<disabledcolor>DisabledColour</disabledcolor>
+		<textoffsetx>20</textoffsetx>
+		<align>left</align>
+		<aligny>center</aligny>
+		<reverse>yes</reverse>
+		<pulseonselect>false</pulseonselect>
+	</default>
+
+	<default type="sliderex">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>66</height>
+		<width>183</width>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>common/Button_FO.png</texturefocus>
+		<sliderwidth>230</sliderwidth>
+		<sliderheight>23</sliderheight>
+		<texturesliderbar>osd/SliderBack.png</texturesliderbar>
+		<textureslidernib border="2">osd/SliderNibNF.png</textureslidernib>
+		<textureslidernibfocus border="2">osd/SliderNibFO.png</textureslidernibfocus>
+		<font>Font_Reg_44</font>
+		<textcolor>Light</textcolor>
+		<focusedcolor>ButtonLabel</focusedcolor>
+		<disabledcolor>DisabledColour</disabledcolor>
+		<textoffsetx>20</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<align>left</align>
+		<aligny>center</aligny>
+	</default>
+
+	<default type="progress">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>44</height>
+		<texturebg>-</texturebg>
+		<lefttexture>-</lefttexture>
+		<midtexture border="10">osd/Progress_Bar.png</midtexture>
+		<righttexture>-</righttexture>
+		<overlaytexture>-</overlaytexture>
+	</default>
+
+	<default type="slider">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>360</width>
+		<height>23</height>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<texturesliderbar>osd/slider_bg_2.png</texturesliderbar>
+		<textureslidernib border="2">osd/SliderNibNF.png</textureslidernib>
+		<textureslidernibfocus border="2">osd/SliderNibFO.png</textureslidernibfocus>
+	</default>
+
+	<default type="scrollbar">
+		<width>38</width>
+		<texturesliderbackground border="0,14,0,14">other_textures/ScrollBarV.png</texturesliderbackground>
+		<texturesliderbar border="0,14,0,14">other_textures/ScrollBarV_bar_focus.png</texturesliderbar>
+		<texturesliderbarfocus border="0,14,0,14">other_textures/ScrollBarV_bar_focus.png</texturesliderbarfocus>
+		<textureslidernib>other_textures/ScrollBarNib.png</textureslidernib>
+		<textureslidernibfocus>other_textures/ScrollBarNib.png</textureslidernibfocus>
+		<showonepage>false</showonepage>
+		<orientation>vertical</orientation>
+	</default>
+
+	<default type="textbox">
+		<label>-</label>
+		<font>Font_Reg_44</font>
+		<textcolor>Light</textcolor>
+		<pagecontrol>61</pagecontrol>
+	</default>
+
+	<control type="edit">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>66</height>
+		<width>400</width>
+		<aligny>center</aligny>
+		<hinttext>...</hinttext>
+		<font>Font_Reg_44</font>
+		<textcolor>Light</textcolor>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>common/Button_FO.png</texturefocus>
+	</control>
+
+</includes>

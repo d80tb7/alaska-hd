@@ -1,0 +1,1507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="50">
+	<zorder>100</zorder>
+	<visible>!Window.IsVisible(startup)</visible>
+	<controls>
+
+		<control type="group">
+			<visible>!Window.IsVisible(3000) + !Window.IsVisible(startup) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(screencalibration) + !Window.IsVisible(screensaver) + !Window.IsVisible(slideshow)</visible>
+
+			<!-- Global heading -->
+
+			<control type="group">
+				<posx>46</posx>
+				<visible>!Window.IsVisible(home)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" start="0,-180" end="0,0" time="400" delay="400" tween="cubic" easing="out" />
+					<effect type="fade" start="0" end="100" time="400" delay="400" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="200" />
+					<effect type="slide" start="0,0" end="0,-180" time="0" delay="200" />
+				</animation>
+				<control type="label">
+					<label>$VAR[Global_HeadingLabels]</label>
+					<include>Global_HeadingSectionVars</include>
+				</control>
+				<control type="label">
+					<label>$VAR[Global_HeadingDetails]</label>
+					<include>Global_HeadingDetailVars</include>
+				</control>
+				<control type="label">
+					<label>$VAR[Global_WidgetDetails]</label>
+					<include>Global_HeadingDetailVars</include>
+					<visible>Window.IsVisible(51) | Window.IsVisible(52) | Window.IsVisible(53)</visible>
+				</control>
+				<control type="label">
+					<label>$INFO[Container.NumItems,, $LOCALIZE[31100]]</label>
+					<include>Global_HeadingAlbumDetailVars</include>
+					<visible>[Window.IsVisible(pictures) + !ListItem.IsFolder] | [Window.IsVisible(musiclibrary) + !SubString(ListItem.Icon,Default) + StringCompare(Container.Viewmode,$LOCALIZE[31121])]</visible>
+				</control>
+				<control type="label">
+					<label>$INFO[Window(Weather).Property(WeatherProvider)]</label>
+					<include>Global_HeadingAlbumDetailVars</include>
+					<visible>[Window.IsVisible(weather)]</visible>
+				</control>
+			</control>
+
+			<!-- Favourites heading -->
+
+			<control type="group">
+				<posx>46</posx>
+				<visible>Window.IsVisible(favourites)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" start="0,-180" end="0,0" time="400" delay="800" tween="cubic" easing="out" />
+					<effect type="fade" start="0" end="100" time="400" delay="800" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="200" />
+					<effect type="slide" start="0,0" end="0,-180" time="0" delay="200" />
+				</animation>
+				<control type="label">
+					<label>1036</label>
+					<include>Global_HeadingSectionVars</include>
+				</control>
+				<control type="label">
+					<label>$INFO[Window(Home).Property(favourite.count),, $LOCALIZE[31157]]</label>
+					<include>Global_HeadingDetailVars</include>
+					<visible>!IntegerGreaterThan(Window(Home).Property(favourite.count),1)</visible>
+				</control>
+				<control type="label">
+					<label>$INFO[Window(Home).Property(favourite.count),, $LOCALIZE[31100]]</label>
+					<include>Global_HeadingDetailVars</include>
+					<visible>IntegerGreaterThan(Window(Home).Property(favourite.count),1)</visible>
+				</control>
+			</control>
+			
+			<!-- Global Date/Time -->
+
+			<control type="group">
+				<posx>1874</posx>
+				<visible>!Window.IsActive(extendedprogressdialog) + !Window.IsActive(infodialog) + !Window.IsActive(busydialog) + !Window.IsActive(volumebar) + !Window.IsActive(mutebug)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" start="0,-180" end="0,0" time="400" delay="400" tween="cubic" easing="out" />
+					<effect type="fade" start="0" end="100" time="400" delay="400" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="200" />
+					<effect type="slide" start="0,0" end="0,-180" time="0" delay="200" />
+				</animation>
+				<control type="label">
+					<posy>36</posy>
+					<width>400</width>
+					<height>60</height>
+					<font>Font_Black_Caps_60</font>
+					<textcolor>Light</textcolor>
+					<info>System.Time</info>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<posy>90</posy>
+					<width>400</width>
+					<height>36</height>
+					<font>Font_Light_Caps_36</font>
+					<textcolor>Light</textcolor>
+					<label>$INFO[System.Date(d)] $INFO[System.Date(MMM)] $INFO[System.Date(yyyy)]</label>
+					<align>right</align>
+				</control>
+			</control>
+
+			<!-- Global Now Playing Music -->
+
+			<control type="group">
+				<posx>29</posx>
+				<posy>348r</posy>
+				<visible>Player.HasAudio + !SubString(Window(videolibrary).Property(TvTunesIsAlive),True)</visible>
+				<animation type="Conditional" condition="!system.getbool(lookandfeel.enablerssfeeds) | [!Window.IsActive(home) + Skin.HasSetting(Disable_Global_RSS)]">
+					<effect type="slide" start="0,0" end="0,45" time="200" tween="cubic" easing="inout" delay="200" />
+				</animation>
+				<animation type="Conditional" condition="Window.IsVisible(playercontrols) + [!system.getbool(lookandfeel.enablerssfeeds) | [!Window.IsActive(home) + Skin.HasSetting(Disable_Global_RSS)]]">
+					<effect type="slide" start="0,0" end="0,-45" time="400" tween="cubic" easing="inout" />
+				</animation>
+				<animation type="Visible">
+					<effect type="slide" start="-300,0" end="0,0" time="600" delay="800" tween="cubic" easing="out" />
+					<effect type="fade" start="0" end="100" time="600" delay="800" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="400" />
+				</animation>
+				<control type="image">
+					<width>278</width>
+					<height>278</height>
+					<texture>$INFO[MusicPlayer.Cover]</texture>
+					<aspectratio aligny="top">scale</aspectratio>
+					<bordertexture border="16">common/Now_Playing_Border.png</bordertexture>
+					<bordersize>16</bordersize>
+				</control>
+				<control type="label">
+					<posx>280</posx>
+					<posy>169</posy>
+					<width>1600</width>
+					<height>48</height>
+					<font>Font_Light_Caps_48</font>
+					<label>$INFO[MusicPlayer.Title]</label>
+					<textcolor>Medium</textcolor>
+					<animation effect="slide" end="0,39" condition="IsEmpty(MusicPlayer.Artist) + IsEmpty(MusicPlayer.Album)">Conditional</animation>
+				</control>
+				<control type="grouplist">
+					<posx>280</posx>
+					<posy>213</posy>
+					<width>1600</width>
+					<height>48</height>
+					<itemgap>0</itemgap>
+					<orientation>horizontal</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
+					<control type="label">
+						<width min="0" max="800">auto</width>
+						<height>48</height>
+						<font>Font_Black_36</font>
+						<label>$INFO[MusicPlayer.Artist,,  ]</label>
+						<textcolor>Medium</textcolor>
+					</control>
+					<control type="label">
+						<posy>6</posy>
+						<width min="0" max="800">auto</width>
+						<height>36</height>
+						<font>Font_Light_36</font>
+						<label>$INFO[MusicPlayer.Album]</label>
+						<textcolor>Medium</textcolor>
+					</control>
+				</control>
+			</control>
+
+			<!-- Global Now Playing Video -->
+
+			<control type="group">
+				<posx>29</posx>
+				<posy>336r</posy>
+				<visible>Player.HasVideo + !VideoPlayer.IsFullscreen</visible>
+				<animation type="Conditional" condition="!system.getbool(lookandfeel.enablerssfeeds) | [!Window.IsActive(home) + Skin.HasSetting(Disable_Global_RSS)]">
+					<effect type="slide" start="0,0" end="0,45" time="200" tween="cubic" easing="inout" delay="200" />
+				</animation>
+				<animation type="Conditional" condition="Window.IsVisible(playercontrols) + [!system.getbool(lookandfeel.enablerssfeeds) | [!Window.IsActive(home) + Skin.HasSetting(Disable_Global_RSS)]]">
+					<effect type="slide" start="0,0" end="0,-45" time="400" tween="cubic" easing="inout" />
+				</animation>
+				<animation type="Visible">
+					<effect type="slide" start="-300,0" end="0,0" time="600" delay="800" tween="cubic" easing="out" />
+					<effect type="fade" start="0" end="100" time="600" delay="800" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="400" />
+				</animation>
+				<control type="image">
+					<posy>54</posy>
+					<width>352</width>
+					<height>212</height>
+					<texture border="16">common/Now_Playing_Border.png</texture>
+				</control>
+				<control type="videowindow">
+					<posx>16</posx>
+					<posy>70</posy>
+					<width>320</width>
+					<height>180</height>
+				</control>
+				<control type="label">
+					<posx>16</posx>
+					<posy>130</posy>
+					<width>320</width>
+					<height>60</height>
+					<align>center</align>
+					<font>Font_Black_Caps_60</font>
+					<textcolor>Medium</textcolor>
+					<label>$VAR[Player_Status]</label>
+					<include>Animation_CommonFade</include>
+				</control>
+				<control type="label">
+					<posx>354</posx>
+					<posy>157</posy>
+					<width>1506</width>
+					<height>48</height>
+					<font>Font_Light_Caps_48</font>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<textcolor>Medium</textcolor>
+					<animation effect="slide" end="0,39" condition="IsEmpty(VideoPlayer.TVShowTitle) + IsEmpty(VideoPlayer.Episode)">Conditional</animation>
+				</control>
+				<control type="grouplist">
+					<posx>354</posx>
+					<posy>201</posy>
+					<width>1506</width>
+					<height>48</height>
+					<itemgap>0</itemgap>
+					<orientation>horizontal</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
+					<control type="label">
+						<width min="0" max="800">auto</width>
+						<height>48</height>
+						<font>Font_Black_36</font>
+						<label>$INFO[VideoPlayer.TVShowTitle,,  ]</label>
+						<textcolor>Medium</textcolor>
+					</control>
+					<control type="label">
+						<posy>6</posy>
+						<width min="0" max="800">auto</width>
+						<height>36</height>
+						<font>Font_Light_36</font>
+						<label>$LOCALIZE[20359]$INFO[VideoPlayer.Season, ,x]$INFO[VideoPlayer.Episode]</label>
+						<textcolor>Medium</textcolor>
+						<visible>!IsEmpty(VideoPlayer.Episode)</visible>
+					</control>
+				</control>
+			</control>
+
+			<!-- Global RSS -->
+
+			<control type="rss" id="1">
+				<posx>0</posx>
+				<posy>63r</posy>
+				<width>1920</width>
+				<height>36</height>
+				<aligny>center</aligny>
+				<font>Font_Thin_36</font>
+				<textcolor>Medium</textcolor>
+				<headlinecolor>Medium</headlinecolor>
+				<titlecolor>Medium</titlecolor>
+				<urlset>1</urlset>
+				<visible>Window.IsActive(home) | [!Window.IsActive(home) + !Skin.HasSetting(Disable_Global_RSS)]</visible>
+				<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="slide" end="0,70" time="400" tween="cubic" easing="out" condition="Window.IsVisible(playercontrols)">Conditional</animation>
+			</control>
+
+		</control>
+
+		<!-- Global debug grid -->
+
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>special://skin/backgrounds/debuggrid1080.png</texture>
+			<colordiffuse>88ffffff</colordiffuse>
+			<visible>Skin.HasSetting(DebugGrid)</visible>
+		</control>
+
+		<!-- Debug Info -->
+
+		<control type="group">
+			<visible>Skin.HasSetting(DebugInfo)</visible>
+
+			<control type="grouplist">
+				<posx>15</posx>
+				<posy>15</posy>
+				<width>780</width>
+				<height>450</height>
+				<itemgap>12</itemgap>
+
+				<!-- Custom window labels -->
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>Custom_Viewtype_Movie_Watchlist.xml</label>
+					<visible>Window.IsVisible(Custom_Viewtype_Movie_Watchlist.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>Custom_Viewtype_TV_Watchlist.xml</label>
+					<visible>Window.IsVisible(Custom_Viewtype_TV_Watchlist.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>Custom_Overlay.xml</label>
+					<visible>Window.IsVisible(Custom_Overlay.xml)</visible>
+				</control>
+
+				<!-- Window labels -->
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>AddonBrowser.xml</label>
+					<visible>Window.IsVisible(AddonBrowser.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>CustomSettings.xml</label>
+					<visible>Window.IsVisible(CustomSettings.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>FileManager.xml</label>
+					<visible>Window.IsVisible(FileManager.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>Home.xml</label>
+					<visible>Window.IsVisible(Home.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>LoginScreen.xml</label>
+					<visible>Window.IsVisible(LoginScreen.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>MyMusicNav.xml</label>
+					<visible>Window.IsVisible(MyMusicNav.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>MyMusicPlaylist.xml</label>
+					<visible>Window.IsVisible(MyMusicPlaylist.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>MyMusicPlaylistEditor.xml</label>
+					<visible>Window.IsVisible(MyMusicPlaylistEditor.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>MyMusicSongs.xml</label>
+					<visible>Window.IsVisible(MyMusicSongs.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>MyPics.xml</label>
+					<visible>Window.IsVisible(MyPics.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>MyPVR.xml</label>
+					<visible>Window.IsVisible(MyPVR.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>MyVideoNav.xml</label>
+					<visible>Window.IsVisible(MyVideoNav.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>MyVideoPlaylist.xml</label>
+					<visible>Window.IsVisible(MyVideoPlaylist.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>MyWeather.xml</label>
+					<visible>Window.IsVisible(MyWeather.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>Settings.xml</label>
+					<visible>Window.IsVisible(Settings.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>SettingsCategory.xml</label>
+					<visible>Window.IsVisible(SettingsCategory.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>SettingsProfile.xml</label>
+					<visible>Window.IsVisible(SettingsProfile.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>SkinSettings.xml</label>
+					<visible>Window.IsVisible(SkinSettings.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>VideoFullScreen.xml</label>
+					<visible>Window.IsVisible(VideoFullScreen.xml)</visible>
+				</control>
+
+				<!-- Dialog labels -->
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogAddonInfo.xml</label>
+					<visible>Window.IsVisible(DialogAddonInfo.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogAddonSettings.xml</label>
+					<visible>Window.IsVisible(DialogAddonSettings.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogAlbumInfo.xml</label>
+					<visible>Window.IsVisible(DialogAlbumInfo.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogBusy.xml</label>
+					<visible>Window.IsVisible(DialogBusy.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogButtonMenu.xml</label>
+					<visible>Window.IsVisible(DialogButtonMenu.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogContentSettings.xml</label>
+					<visible>Window.IsVisible(DialogContentSettings.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogContextMenu.xml</label>
+					<visible>Window.IsVisible(DialogContextMenu.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FF0000FF</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>ExtendedProgressBar.xml</label>
+					<visible>Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogFavourites.xml</label>
+					<visible>Window.IsVisible(DialogFavourites.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogFileStacking.xml</label>
+					<visible>Window.IsVisible(DialogFileStacking.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogFullScreenInfo.xml</label>
+					<visible>Window.IsVisible(DialogFullScreenInfo.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogKaiToast.xml</label>
+					<visible>Window.IsVisible(DialogKaiToast.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogKaraokeSongSelector.xml</label>
+					<visible>Window.IsVisible(DialogKaraokeSongSelector.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogKaraokeSongSelectorLarge.xml</label>
+					<visible>Window.IsVisible(DialogKaraokeSongSelectorLarge.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogKeyboard.xml</label>
+					<visible>Window.IsVisible(DialogKeyboard.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogMediaFilter.xml</label>
+					<visible>Window.IsVisible(DialogMediaFilter.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogMediaSource.xml</label>
+					<visible>Window.IsVisible(DialogMediaSource.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogMuteBug.xml</label>
+					<visible>Window.IsVisible(DialogMuteBug.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogNetworkSetup.xml</label>
+					<visible>Window.IsVisible(DialogNetworkSetup.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogNumeric.xml</label>
+					<visible>Window.IsVisible(DialogNumeric.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogOk.xml</label>
+					<visible>Window.IsVisible(DialogOk.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogPeripheralManager.xml</label>
+					<visible>Window.IsVisible(DialogPeripheralManager.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogPeripheralSettings.xml</label>
+					<visible>Window.IsVisible(DialogPeripheralSettings.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogPictureInfo.xml</label>
+					<visible>Window.IsVisible(DialogPictureInfo.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogProgress.xml</label>
+					<visible>Window.IsVisible(DialogProgress.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogPVRChannelManager.xml</label>
+					<visible>Window.IsVisible(DialogPVRChannelManager.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogPVRChannelsOSD.xml</label>
+					<visible>Window.IsVisible(DialogPVRChannelsOSD.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogPVRGroupManager.xml</label>
+					<visible>Window.IsVisible(DialogPVRGroupManager.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogPVRGuideInfo.xml</label>
+					<visible>Window.IsVisible(DialogPVRGuideInfo.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogPVRGuideOSD.xml</label>
+					<visible>Window.IsVisible(DialogPVRGuideOSD.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogPVRGuideSearch.xml</label>
+					<visible>Window.IsVisible(DialogPVRGuideSearch.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogPVRRecordingInfo.xml</label>
+					<visible>Window.IsVisible(DialogPVRRecordingInfo.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogPVRTimerSettings.xml</label>
+					<visible>Window.IsVisible(DialogPVRTimerSettings.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogSeekbar.xml</label>
+					<visible>Window.IsVisible(DialogSeekbar.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogSelect.xml</label>
+					<visible>Window.IsVisible(DialogSelect.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogSlider.xml</label>
+					<visible>Window.IsVisible(DialogSlider.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogSongInfo.xml</label>
+					<visible>Window.IsVisible(DialogSongInfo.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogTextViewer.xml</label>
+					<visible>Window.IsVisible(DialogTextViewer.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogVideoInfo.xml</label>
+					<visible>Window.IsVisible(DialogVideoInfo.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogVolumeBar.xml</label>
+					<visible>Window.IsVisible(DialogVolumeBar.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>DialogYesNo.xml</label>
+					<visible>Window.IsVisible(DialogYesNo.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>FileBrowser.xml</label>
+					<visible>Window.IsVisible(FileBrowser.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>LockSettings.xml</label>
+					<visible>Window.IsVisible(LockSettings.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>MusicKaraokeLyrics.xml</label>
+					<visible>Window.IsVisible(MusicKaraokeLyrics.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>MusicOSD.xml</label>
+					<visible>Window.IsVisible(MusicOSD.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>MusicOverlay.xml</label>
+					<visible>Window.IsVisible(MusicOverlay.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>MusicVisualisation.xml</label>
+					<visible>Window.IsVisible(MusicVisualisation.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>PlayerControls.xml</label>
+					<visible>Window.IsVisible(PlayerControls.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>ProfileSettings.xml</label>
+					<visible>Window.IsVisible(ProfileSettings.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>SettingsScreenCalibration.xml</label>
+					<visible>Window.IsVisible(SettingsScreenCalibration.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>SettingsSystemInfo.xml</label>
+					<visible>Window.IsVisible(SettingsSystemInfo.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>SlideShow.xml</label>
+					<visible>Window.IsVisible(SlideShow.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>SmartPlaylistEditor.xml</label>
+					<visible>Window.IsVisible(SmartPlaylistEditor.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>SmartPlaylistRule.xml</label>
+					<visible>Window.IsVisible(SmartPlaylistRule.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>VideoOSD.xml</label>
+					<visible>Window.IsVisible(VideoOSD.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>VideoOSDBookmarks.xml</label>
+					<visible>Window.IsVisible(VideoOSDBookmarks.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>VideoOSDSettings.xml</label>
+					<visible>Window.IsVisible(VideoOSDSettings.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>VideoOverlay.xml</label>
+					<visible>Window.IsVisible(VideoOverlay.xml)</visible>
+				</control>
+
+				<control type="label">
+					<width>780</width>
+					<height>21</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>left</align>
+					<label>VisualisationPresetList.xml</label>
+					<visible>Window.IsVisible(VisualisationPresetList.xml)</visible>
+				</control>
+
+			</control>
+
+			<!-- Control label -->
+
+			<control type="label">
+				<posx>15r</posx>
+				<posy>15</posy>
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FF0000FF</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<align>right</align>
+				<label>$INFO[System.CurrentControl]</label>
+			</control>
+
+			<!-- Folder Name label -->
+
+			<control type="label">
+				<posx>15r</posx>
+				<posy>48</posy>
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<align>right</align>
+				<label>$INFO[Container.FolderName,$LOCALIZE[19076] ]</label>
+			</control>
+
+			<!-- Folder Path label -->
+
+			<control type="label">
+				<posx>15r</posx>
+				<posy>81</posy>
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<align>right</align>
+				<label>$INFO[Container.FolderPath,$LOCALIZE[15311] ]</label>
+			</control>
+
+		</control>
+
+		<!-- Image test code -->
+
+		<control type="group">
+
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>1080</height>
+				<texture>osd/OSDBack.png</texture>
+			</control>
+
+			<control type="group">
+				<posx>0</posx>
+				<posy>40</posy>
+
+				<control type="label">
+					<posx>30</posx>
+					<posy>30</posy>
+					<width>540</width>
+					<height>48</height>
+					<font>font13</font>
+					<haspath>true</haspath>
+					<label>ListItem.Art(thumb)</label>
+					<textcolor>Medium</textcolor>
+				</control>
+
+				<control type="image">
+					<posx>30</posx>
+					<posy>100</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture fallback="DefaultAddonNone.png">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="16">common/Now_Playing_Border.png</bordertexture>
+					<bordersize>16</bordersize>
+				</control>
+
+			</control>
+
+			<control type="group">
+				<posx>510</posx>
+				<posy>40</posy>
+
+				<control type="label">
+					<posx>30</posx>
+					<posy>30</posy>
+					<width>540</width>
+					<height>48</height>
+					<font>font13</font>
+					<haspath>true</haspath>
+					<label>ListItem.Art(banner)</label>
+					<textcolor>Medium</textcolor>
+				</control>
+
+				<control type="image">
+					<posx>30</posx>
+					<posy>100</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture fallback="DefaultAddonNone.png">$INFO[ListItem.Art(banner)]</texture>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="16">common/Now_Playing_Border.png</bordertexture>
+					<bordersize>16</bordersize>
+				</control>
+
+			</control>
+
+			<control type="group">
+				<posx>980</posx>
+				<posy>40</posy>
+
+				<control type="label">
+					<posx>30</posx>
+					<posy>30</posy>
+					<width>540</width>
+					<height>48</height>
+					<font>font13</font>
+					<haspath>true</haspath>
+					<label>ListItem.Art(poster)</label>
+					<textcolor>Medium</textcolor>
+				</control>
+
+				<control type="image">
+					<posx>30</posx>
+					<posy>100</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture fallback="DefaultAddonNone.png">$INFO[ListItem.Art(poster)]</texture>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="16">common/Now_Playing_Border.png</bordertexture>
+					<bordersize>16</bordersize>
+				</control>
+
+			</control>
+
+			<control type="group">
+				<posx>1450</posx>
+				<posy>40</posy>
+
+				<control type="label">
+					<posx>30</posx>
+					<posy>30</posy>
+					<width>540</width>
+					<height>48</height>
+					<font>font13</font>
+					<haspath>true</haspath>
+					<label>ListItem.Art(fanart)</label>
+					<textcolor>Medium</textcolor>
+				</control>
+
+				<control type="image">
+					<posx>30</posx>
+					<posy>100</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture fallback="DefaultAddonNone.png">$INFO[ListItem.Art(fanart)]</texture>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="16">common/Now_Playing_Border.png</bordertexture>
+					<bordersize>16</bordersize>
+				</control>
+
+			</control>
+
+			<control type="group">
+				<posx>0</posx>
+				<posy>410</posy>
+
+				<control type="label">
+					<posx>30</posx>
+					<posy>30</posy>
+					<width>540</width>
+					<height>48</height>
+					<font>font13</font>
+					<haspath>true</haspath>
+					<label>ListItem.Art(tvshow.poster)</label>
+					<textcolor>Medium</textcolor>
+				</control>
+
+				<control type="image">
+					<posx>30</posx>
+					<posy>100</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture fallback="DefaultAddonNone.png">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="16">common/Now_Playing_Border.png</bordertexture>
+					<bordersize>16</bordersize>
+				</control>
+
+			</control>
+
+			<control type="group">
+				<posx>510</posx>
+				<posy>410</posy>
+
+				<control type="label">
+					<posx>30</posx>
+					<posy>30</posy>
+					<width>540</width>
+					<height>48</height>
+					<font>font13</font>
+					<haspath>true</haspath>
+					<label>ListItem.Art(tvshow.banner)</label>
+					<textcolor>Medium</textcolor>
+				</control>
+
+				<control type="image">
+					<posx>30</posx>
+					<posy>100</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture fallback="DefaultAddonNone.png">$INFO[ListItem.Art(tvshow.banner)]</texture>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="16">common/Now_Playing_Border.png</bordertexture>
+					<bordersize>16</bordersize>
+				</control>
+
+			</control>
+
+			<control type="group">
+				<posx>980</posx>
+				<posy>410</posy>
+
+				<control type="label">
+					<posx>30</posx>
+					<posy>30</posy>
+					<width>540</width>
+					<height>48</height>
+					<font>font13</font>
+					<haspath>true</haspath>
+					<label>ListItem.Art(season.poster)</label>
+					<textcolor>Medium</textcolor>
+				</control>
+
+				<control type="image">
+					<posx>30</posx>
+					<posy>100</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture fallback="DefaultAddonNone.png">$INFO[ListItem.Art(season.poster)]</texture>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="16">common/Now_Playing_Border.png</bordertexture>
+					<bordersize>16</bordersize>
+				</control>
+
+			</control>
+
+			<control type="group">
+				<posx>1450</posx>
+				<posy>410</posy>
+
+				<control type="label">
+					<posx>30</posx>
+					<posy>30</posy>
+					<width>540</width>
+					<height>48</height>
+					<font>font13</font>
+					<haspath>true</haspath>
+					<label>ListItem.Art(season.banner)</label>
+					<textcolor>Medium</textcolor>
+				</control>
+
+				<control type="image">
+					<posx>30</posx>
+					<posy>100</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture fallback="DefaultAddonNone.png">$INFO[ListItem.Art(season.banner)]</texture>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="16">common/Now_Playing_Border.png</bordertexture>
+					<bordersize>16</bordersize>
+				</control>
+
+			</control>
+
+			<control type="group">
+				<posx>0</posx>
+				<posy>740</posy>
+
+				<control type="label">
+					<posx>30</posx>
+					<posy>30</posy>
+					<width>540</width>
+					<height>48</height>
+					<font>font13</font>
+					<haspath>true</haspath>
+					<label>ListItem.Art(season.fanart)</label>
+					<textcolor>Medium</textcolor>
+				</control>
+
+				<control type="image">
+					<posx>30</posx>
+					<posy>100</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture fallback="DefaultAddonNone.png">$INFO[ListItem.Art(season.fanart)]</texture>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="16">common/Now_Playing_Border.png</bordertexture>
+					<bordersize>16</bordersize>
+				</control>
+
+			</control>
+
+			<control type="group">
+				<posx>510</posx>
+				<posy>740</posy>
+
+				<control type="label">
+					<posx>30</posx>
+					<posy>30</posy>
+					<width>540</width>
+					<height>48</height>
+					<font>font13</font>
+					<haspath>true</haspath>
+					<label>Player.Art(fanart)</label>
+					<textcolor>Medium</textcolor>
+				</control>
+
+				<control type="image">
+					<posx>30</posx>
+					<posy>100</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture fallback="DefaultAddonNone.png">$INFO[Player.Art(fanart)]</texture>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="16">common/Now_Playing_Border.png</bordertexture>
+					<bordersize>16</bordersize>
+				</control>
+
+			</control>
+
+			<control type="group">
+				<posx>980</posx>
+				<posy>740</posy>
+
+				<control type="label">
+					<posx>30</posx>
+					<posy>30</posy>
+					<width>540</width>
+					<height>48</height>
+					<font>font13</font>
+					<haspath>true</haspath>
+					<label>Player.Art(tvshow.poster)</label>
+					<textcolor>Medium</textcolor>
+				</control>
+
+				<control type="image">
+					<posx>30</posx>
+					<posy>100</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture fallback="DefaultAddonNone.png">$INFO[Player.Art(tvshow.poster)]</texture>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="16">common/Now_Playing_Border.png</bordertexture>
+					<bordersize>16</bordersize>
+				</control>
+
+			</control>
+
+			<control type="group">
+				<posx>1450</posx>
+				<posy>740</posy>
+
+				<control type="label">
+					<posx>30</posx>
+					<posy>30</posy>
+					<width>540</width>
+					<height>48</height>
+					<font>font13</font>
+					<haspath>true</haspath>
+					<label>Player.Art(thumb)</label>
+					<textcolor>Medium</textcolor>
+				</control>
+
+				<control type="image">
+					<posx>30</posx>
+					<posy>100</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture fallback="DefaultAddonNone.png">$INFO[Player.Art(thumb)]</texture>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="16">common/Now_Playing_Border.png</bordertexture>
+					<bordersize>16</bordersize>
+				</control>
+
+			</control>
+
+			<visible>false</visible>
+
+		</control>
+
+	</controls>
+
+</window>

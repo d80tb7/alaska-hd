@@ -1,0 +1,50 @@
+<colors>
+
+	<!-- Default colours -->
+
+	<color name="SelectedColour">ffaf0000</color>
+	<color name="DisabledColour">76ff0000</color>
+	
+	<!-- Diffuse colours -->
+	
+	<color name="FanartDiffuse">33F1F1F1</color>
+	<color name="FilterDiffuse">f1F1F1F1</color>
+	<color name="PictureDiffuse">52F1F1F1</color>
+	<color name="MatteDiffuse">FF000000</color>
+	<color name="PosterDiffuse">89F1F1F1</color>
+	<color name="LandscapeDiffuse">89F1F1F1</color>
+	<color name="MusicWallDiffuse">48F1F1F1</color>
+
+	<!-- Flag / Button colours -->
+
+	<color name="MediaFlags">b9F1F1F1</color>
+	<color name="MPAARating">b9F1F1F1</color>
+	<color name="StarRating">b9F1F1F1</color>
+	<color name="WatchedTick">ffaf0000</color>
+	<color name="OSDButtonFO">fff1f1f1</color>
+	<color name="OSDButtonNF">ffa6a6a6</color>
+	<color name="ButtonLabel">ff474747</color>
+
+	<!-- OSD colours -->
+
+	<color name="OSDLabelFO">ff686868</color>	
+	<color name="OSDLabelNF">bbe2e2e2</color>
+	<color name="OSDDetail">b9F1F1F1</color>
+	<color name="OSDStatus">34f1f1f1</color>
+
+	<!-- Main colours -->
+
+	<color name="Heavy">ffd1d1d1</color>
+	<color name="Medium">ffb8b8b8</color>
+	<color name="MedLight">ffa8a8a8</color>
+	<color name="Light">ff999999</color>
+	<color name="Home">ff494949</color>	
+	
+	<!-- Base colours -->
+
+	<color name="Black">FF000000</color>
+	<color name="White">FFF1F1F1</color>
+	<color name="Red">FFFF0000</color>
+	<color name="Blue">FF0000FF</color>
+
+</colors>

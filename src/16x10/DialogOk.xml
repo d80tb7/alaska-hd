@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="100">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<coordinates>
+		<origin x="0" y="0"/>
+	</coordinates>
+
+	<controls>
+
+		<!-- Default controls (hidden) -->
+
+		<control type="button" id="10">
+			<include>HiddenControl</include>
+			<label>106</label>
+			<onclick>Close</onclick>
+		</control>
+
+		<!-- Filter -->
+
+		<include>Global_DialogFilter</include>
+
+		<!-- Details -->
+
+		<control type="group" id="5000">
+			<posy>Offset_Value</posy>
+			<include>Animation_ZoomInMenu</include>
+			<animation type="Conditional" condition="Window.IsActive(shutdownmenu) | Window.IsActive(DialogYesNo.xml) | Window.IsActive(progressdialog)">
+				<effect type="zoom" time="600" center="960,540" start="100" end="76" tween="cubic" easing="inout" />
+			</animation>
+
+			<control type="grouplist">
+				<posx>260</posx>
+				<posy>340</posy>
+				<width>1400</width>
+				<height>400</height>
+				<itemgap>8</itemgap>
+				<align>center</align>
+				<orientation>vertical</orientation>
+
+				<!-- Heading -->
+
+				<control type="label" id="1">
+					<description>Heading Label</description>
+					<width>1400</width>
+					<height>42</height>
+					<align>center</align>
+					<font>Font_Black_Caps_42</font>
+					<textcolor>$VAR[DialogHeadingValue]</textcolor>
+				</control>
+
+				<control type="label">
+					<description>Spacer</description>
+					<width>1400</width>
+					<height>8</height>
+				</control>
+
+				<control type="label" id="2">
+					<width>1400</width>
+					<height>44</height>
+					<align>center</align>
+					<scroll>true</scroll>
+					<font>Font_Light_Caps_36</font>
+					<textcolor>Medium</textcolor>
+					<visible>!IsEmpty(Control.GetLabel(2))</visible>
+				</control>
+
+				<control type="label" id="3">
+					<width>1400</width>
+					<height>44</height>
+					<align>center</align>
+					<scroll>true</scroll>
+					<font>Font_Light_Caps_36</font>
+					<textcolor>Medium</textcolor>
+					<visible>!IsEmpty(Control.GetLabel(3))</visible>
+				</control>
+
+				<control type="label" id="4">
+					<width>1400</width>
+					<height>44</height>
+					<align>center</align>
+					<scroll>true</scroll>
+					<font>Font_Light_Caps_36</font>
+					<textcolor>Medium</textcolor>
+					<visible>!IsEmpty(Control.GetLabel(4))</visible>
+				</control>
+
+				<control type="label">
+					<description>Spacer</description>
+					<width>1400</width>
+					<height>8</height>
+				</control>
+
+				<!-- Menu -->
+
+				<control type="grouplist">
+					<width>1400</width>
+					<height>76</height>
+					<itemgap>0</itemgap>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<scrolltime tween="sine" easing="out">320</scrolltime>
+
+					<!-- OK -->
+
+					<control type="label">
+						<include>DialogMenuValue</include>
+						<label>$INFO[Control.GetLabel(10)]</label>
+						<visible>Control.IsVisible(10)</visible>
+						<animation type="conditional" condition="!Control.HasFocus(10)">
+							<effect type="zoom" center="auto" start="100" end="70" time="200" tween="cubic" easing="in" />
+							<effect type="fade" start="100" end="50" time="200" />
+						</animation>
+					</control>
+
+				</control>
+
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

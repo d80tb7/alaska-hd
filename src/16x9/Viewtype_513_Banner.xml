@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<includes>
+
+	<include name="Viewtype_513_Banner">
+
+		<control type="group">
+			<visible>Control.IsVisible(513)</visible>
+
+			<!-- Browser -->
+
+			<control type="group" id="5000">
+				<posy>Offset_Value</posy>
+				<include>Animation_ZoomInZoomOut</include>
+				<include>Animation_ZoomedByMenu</include>
+				<include>Animation_HiddenByInfo</include>
+
+				<control type="fixedlist" id="513">
+					<posx>450</posx>
+					<posy>159</posy>
+					<height>750</height>
+					<width>1485</width>
+					<onup>513</onup>
+					<ondown>513</ondown>
+					<onleft>7000</onleft>
+					<onright>7000</onright>
+					<pagecontrol>60</pagecontrol>
+					<focusposition>3</focusposition>
+					<orientation>vertical</orientation>
+					<viewtype label="31160">list</viewtype>
+					<scrolltime tween="sine" easing="out">280</scrolltime>
+					<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
+
+					<itemlayout width="1328" height="90">
+						<control type="label">
+							<posx>270</posx>
+							<posy>15</posy>
+							<width>1325</width>
+							<height>35</height>
+							<font>Font_Black_Caps_35</font>
+							<textcolor>Medium</textcolor>
+							<selectedcolor>Heavy</selectedcolor>
+							<label>$VAR[Title_Detail]</label>
+						</control>
+						<control type="image">
+							<posx>270</posx>
+							<posy>51</posy>
+							<width>150</width>
+							<height>27</height>
+							<colordiffuse>MediaFlags</colordiffuse>
+							<texture>$INFO[ListItem.StarRating]</texture>
+						</control>
+					</itemlayout>
+
+					<focusedlayout width="1242" height="195">
+						<control type="group">
+							<visible>SubString(ListItem.Icon,Default)</visible>
+							<control type="image">
+								<posx>283</posx>
+								<posy>15</posy>
+								<width>195</width>
+								<height>195</height>
+								<fadetime>200</fadetime>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" center="auto" start="50" end="100" time="400" tween="back" easing="out" />
+								</animation>
+							</control>
+						</control>
+					</focusedlayout>
+
+				</control>
+
+				<control type="group">
+					<posx>382</posx>
+					<posy>429</posy>
+					<width>885</width>
+					<height>192</height>
+					<visible>!SubString(ListItem.Icon,Default) + !Container.OnNext + !Container.OnPrevious</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+					<control type="image">
+						<posx>83</posx>
+						<posy>15</posy>
+						<width>855</width>
+						<height>162</height>
+						<texture background="true" diffuse="banner/bannermatte.png">$INFO[ListItem.Art(banner)]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<visible>!IsEmpty(ListItem.Art(banner))</visible>
+					</control>
+					<control type="image" id="999">
+						<posx>83</posx>
+						<posy>15</posy>
+						<width>855</width>
+						<height>162</height>
+						<texture fallback="empty" background="true" diffuse="banner/bannermatte.png">$INFO[ListItem.Path]$INFO[ListItem.Season,season0,-]banner.jpg</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<visible>IsEmpty(ListItem.Art(banner)) + !IntegerGreaterThan(ListItem.Season,9)</visible>
+					</control>
+					<control type="image" id="999">
+						<posx>83</posx>
+						<posy>15</posy>
+						<width>855</width>
+						<height>162</height>
+						<texture fallback="empty" background="true" diffuse="banner/bannermatte.png">$INFO[ListItem.Path]$INFO[ListItem.Season,season,-]banner.jpg</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<visible>IsEmpty(ListItem.Art(banner)) + IntegerGreaterThan(ListItem.Season,9)</visible>
+					</control>
+					<control type="group">
+						<visible>IsEmpty(ListItem.Art(banner)) + StringCompare(Control.GetLabel(999),empty)</visible>
+						<control type="image">
+							<posx>83</posx>
+							<posy>15</posy>
+							<width>855</width>
+							<height>162</height>
+							<texture>banner/bannerback.png</texture>
+						</control>
+						<control type="textbox">
+							<posx>103</posx>
+							<posy>72</posy>
+							<width>815</width>
+							<height>82</height>
+							<align>center</align>
+							<aligny>bottom</aligny>
+							<font>Font_Black_Caps_46</font>
+							<textcolor>White</textcolor>
+							<selectedcolor>Heavy</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+					<control type="image">
+						<posx>68</posx>
+						<posy>0</posy>
+						<width>885</width>
+						<height>192</height>
+						<texture>banner/bannerframe.png</texture>
+					</control>				
+					<control type="image">
+						<posx>894</posx>
+						<posy>135</posy>
+						<width>42</width>
+						<height>42</height>
+						<texture>$VAR[Status_Overlay]</texture>
+					</control>
+				</control>
+
+			</control>
+
+		</control>
+
+	</include>
+
+</includes>

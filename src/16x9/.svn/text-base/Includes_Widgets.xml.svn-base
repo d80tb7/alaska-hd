@@ -1,0 +1,1299 @@
+<includes>
+
+	<include name="Movie_Watchlist">
+
+		<item id="1">
+			<label>$INFO[Window(home).Property(RecommendedMovie.1.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.1.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.1.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.1.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.1.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.1.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.1.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.1.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.1.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.1.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.1.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.1.Art(poster))]</icon>
+		</item>
+		<item id="2">
+			<label>$INFO[Window(home).Property(RecommendedMovie.2.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.2.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.2.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.2.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.2.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.2.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.2.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.2.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.2.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.2.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.2.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.2.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.2.Title))</visible>
+		</item>
+		<item id="3">
+			<label>$INFO[Window(home).Property(RecommendedMovie.3.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.3.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.3.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.3.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.3.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.3.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.3.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.3.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.3.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.3.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.3.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.3.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.3.Title))</visible>
+		</item>
+		<item id="4">
+			<label>$INFO[Window(home).Property(RecommendedMovie.4.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.4.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.4.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.4.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.4.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.4.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.4.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.4.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.4.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.4.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.4.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.4.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.4.Title))</visible>
+		</item>
+		<item id="5">
+			<label>$INFO[Window(home).Property(RecommendedMovie.5.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.5.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.5.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.5.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.5.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.5.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.5.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.5.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.5.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.5.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.5.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.5.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.5.Title))</visible>
+		</item>
+		<item id="6">
+			<label>$INFO[Window(home).Property(RecommendedMovie.6.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.6.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.6.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.6.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.6.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.6.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.6.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.6.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.6.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.6.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.6.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.6.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.6.Title))</visible>
+		</item>
+		<item id="7">
+			<label>$INFO[Window(home).Property(RecommendedMovie.7.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.7.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.7.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.7.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.7.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.7.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.7.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.7.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.7.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.7.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.7.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.7.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.7.Title))</visible>
+		</item>
+		<item id="8">
+			<label>$INFO[Window(home).Property(RecommendedMovie.8.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.8.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.8.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.8.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.8.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.8.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.8.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.8.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.8.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.8.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.8.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.8.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.8.Title))</visible>
+		</item>
+		<item id="9">
+			<label>$INFO[Window(home).Property(RecommendedMovie.9.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.9.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.9.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.9.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.9.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.9.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.9.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.9.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.9.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.9.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.9.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.9.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.9.Title))</visible>
+		</item>
+		<item id="10">
+			<label>$INFO[Window(home).Property(RecommendedMovie.10.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.10.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.10.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.10.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.10.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.10.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.10.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.10.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.10.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.10.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.10.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.10.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.10.Title))</visible>
+		</item>
+		<item id="11">
+			<label>$INFO[Window(home).Property(RecommendedMovie.11.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.11.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.11.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.11.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.11.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.11.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.11.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.11.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.11.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.11.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.11.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.11.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.11.Title))</visible>
+		</item>
+		<item id="12">
+			<label>$INFO[Window(home).Property(RecommendedMovie.12.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.12.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.12.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.12.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.12.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.12.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.12.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.12.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.12.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.12.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.12.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.12.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.12.Title))</visible>
+		</item>
+		<item id="13">
+			<label>$INFO[Window(home).Property(RecommendedMovie.13.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.13.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.13.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.13.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.13.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.13.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.13.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.13.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.13.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.13.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.13.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.13.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.13.Title))</visible>
+		</item>
+		<item id="14">
+			<label>$INFO[Window(home).Property(RecommendedMovie.14.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.14.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.14.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.14.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.14.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.14.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.14.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.14.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.14.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.14.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.14.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.14.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.14.Title))</visible>
+		</item>
+		<item id="15">
+			<label>$INFO[Window(home).Property(RecommendedMovie.15.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.15.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.15.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.15.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.15.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.15.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.15.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.15.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.15.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.15.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.15.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.15.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.15.Title))</visible>
+		</item>
+		<item id="16">
+			<label>$INFO[Window(home).Property(RecommendedMovie.16.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.16.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.16.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.16.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.16.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.16.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.16.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.16.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.16.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.16.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.16.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.16.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.16.Title))</visible>
+		</item>
+		<item id="17">
+			<label>$INFO[Window(home).Property(RecommendedMovie.17.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.17.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.17.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.17.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.17.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.17.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.17.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.17.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.17.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.17.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.17.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.17.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.17.Title))</visible>
+		</item>
+		<item id="18">
+			<label>$INFO[Window(home).Property(RecommendedMovie.18.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.18.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.18.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.18.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.18.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.18.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.18.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.18.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.18.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.18.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.18.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.18.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.18.Title))</visible>
+		</item>
+		<item id="19">
+			<label>$INFO[Window(home).Property(RecommendedMovie.19.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.19.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.19.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.19.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.19.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.19.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.19.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.19.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.19.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.19.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.19.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.19.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.19.Title))</visible>
+		</item>
+		<item id="20">
+			<label>$INFO[Window(home).Property(RecommendedMovie.20.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedMovie.20.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedMovie.20.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecommendedMovie.20.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedMovie.20.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedMovie.20.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedMovie.20.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedMovie.20.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedMovie.20.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedMovie.20.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMovie.20.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedMovie.20.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecommendedMovie.20.Title))</visible>
+		</item>
+
+	</include>
+
+	<include name="TV_Watchlist">
+
+		<item id="1">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.1.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.1.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.1.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.1.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.1.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.1.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.1.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.1.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.1.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.1.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.1.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.1.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.1.Art(thumb))]</thumb>
+		</item>
+		<item id="2">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.2.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.2.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.2.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.2.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.2.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.2.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.2.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.2.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.2.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.2.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.2.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.2.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.2.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.2.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.2.Title))</visible>
+		</item>
+		<item id="3">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.3.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.3.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.3.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.3.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.3.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.3.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.3.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.3.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.3.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.3.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.3.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.3.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.3.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.3.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.3.Title))</visible>
+		</item>
+		<item id="4">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.4.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.4.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.4.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.4.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.4.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.4.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.4.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.4.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.4.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.4.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.4.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.4.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.4.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.4.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.4.Title))</visible>
+		</item>
+		<item id="5">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.5.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.5.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.5.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.5.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.5.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.5.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.5.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.5.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.5.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.5.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.5.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.5.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.5.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.5.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.5.Title))</visible>
+		</item>
+		<item id="6">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.6.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.6.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.6.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.6.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.6.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.6.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.6.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.6.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.6.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.6.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.6.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.6.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.6.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.6.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.6.Title))</visible>
+		</item>
+		<item id="7">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.7.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.7.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.7.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.7.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.7.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.7.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.7.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.7.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.7.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.7.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.7.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.7.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.7.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.7.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.7.Title))</visible>
+		</item>
+		<item id="8">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.8.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.8.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.8.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.8.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.8.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.8.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.8.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.8.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.8.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.8.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.8.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.8.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.8.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.8.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.8.Title))</visible>
+		</item>
+		<item id="9">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.9.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.9.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.9.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.9.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.9.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.9.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.9.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.9.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.9.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.9.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.9.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.9.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.9.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.9.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.9.Title))</visible>
+		</item>
+		<item id="10">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.10.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.10.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.10.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.10.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.10.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.10.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.10.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.10.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.10.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.10.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.10.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.10.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.10.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.10.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.10.Title))</visible>
+		</item>
+		<item id="11">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.11.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.11.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.11.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.11.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.11.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.11.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.11.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.11.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.11.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.11.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.11.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.11.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.11.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.11.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.11.Title))</visible>
+		</item>
+		<item id="12">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.12.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.12.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.12.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.12.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.12.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.12.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.12.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.12.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.12.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.12.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.12.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.12.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.12.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.12.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.12.Title))</visible>
+		</item>
+		<item id="13">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.13.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.13.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.13.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.13.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.13.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.13.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.13.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.13.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.13.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.13.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.13.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.13.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.13.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.13.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.13.Title))</visible>
+		</item>
+		<item id="14">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.14.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.14.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.14.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.14.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.14.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.14.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.14.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.14.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.14.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.14.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.14.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.14.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.14.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.14.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.14.Title))</visible>
+		</item>
+		<item id="15">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.15.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.15.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.15.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.15.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.15.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.15.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.15.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.15.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.15.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.15.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.15.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.15.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.15.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.15.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.15.Title))</visible>
+		</item>
+		<item id="16">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.16.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.16.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.16.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.16.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.16.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.16.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.16.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.16.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.16.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.16.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.16.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.16.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.16.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.16.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.16.Title))</visible>
+		</item>
+		<item id="17">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.17.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.17.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.17.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.17.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.17.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.17.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.17.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.17.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.17.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.17.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.17.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.17.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.17.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.17.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.17.Title))</visible>
+		</item>
+		<item id="18">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.18.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.18.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.18.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.18.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.18.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.18.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.18.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.18.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.18.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.18.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.18.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.18.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.18.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.18.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.18.Title))</visible>
+		</item>
+		<item id="19">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.19.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.19.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.19.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.19.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.19.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.19.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.19.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.19.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.19.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.19.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.19.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.19.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.19.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.19.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.19.Title))</visible>
+		</item>
+		<item id="20">
+			<label>$INFO[Window(home).Property(RecommendedEpisode.20.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecommendedEpisode.20.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecommendedEpisode.20.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecommendedEpisode.20.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecommendedEpisode.20.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecommendedEpisode.20.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecommendedEpisode.20.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecommendedEpisode.20.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecommendedEpisode.20.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecommendedEpisode.20.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecommendedEpisode.20.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedEpisode.20.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecommendedEpisode.20.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecommendedEpisode.20.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.20.Title))</visible>
+		</item>
+
+	</include>
+
+	<include name="Movie_Recent">
+
+		<item id="1">
+			<label>$INFO[Window(home).Property(RecentMovie.1.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.1.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.1.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.1.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.1.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.1.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.1.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.1.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.1.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.1.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.1.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.1.Art(poster))]</icon>
+		</item>
+		<item id="2">
+			<label>$INFO[Window(home).Property(RecentMovie.2.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.2.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.2.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.2.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.2.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.2.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.2.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.2.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.2.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.2.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.2.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.2.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.2.Title))</visible>
+		</item>
+		<item id="3">
+			<label>$INFO[Window(home).Property(RecentMovie.3.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.3.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.3.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.3.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.3.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.3.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.3.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.3.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.3.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.3.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.3.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.3.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.3.Title))</visible>
+		</item>
+		<item id="4">
+			<label>$INFO[Window(home).Property(RecentMovie.4.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.4.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.4.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.4.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.4.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.4.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.4.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.4.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.4.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.4.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.4.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.4.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.4.Title))</visible>
+		</item>
+		<item id="5">
+			<label>$INFO[Window(home).Property(RecentMovie.5.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.5.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.5.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.5.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.5.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.5.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.5.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.5.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.5.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.5.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.5.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.5.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.5.Title))</visible>
+		</item>
+		<item id="6">
+			<label>$INFO[Window(home).Property(RecentMovie.6.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.6.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.6.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.6.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.6.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.6.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.6.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.6.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.6.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.6.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.6.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.6.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.6.Title))</visible>
+		</item>
+		<item id="7">
+			<label>$INFO[Window(home).Property(RecentMovie.7.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.7.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.7.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.7.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.7.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.7.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.7.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.7.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.7.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.7.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.7.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.7.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.7.Title))</visible>
+		</item>
+		<item id="8">
+			<label>$INFO[Window(home).Property(RecentMovie.8.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.8.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.8.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.8.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.8.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.8.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.8.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.8.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.8.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.8.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.8.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.8.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.8.Title))</visible>
+		</item>
+		<item id="9">
+			<label>$INFO[Window(home).Property(RecentMovie.9.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.9.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.9.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.9.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.9.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.9.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.9.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.9.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.9.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.9.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.9.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.9.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.9.Title))</visible>
+		</item>
+		<item id="10">
+			<label>$INFO[Window(home).Property(RecentMovie.10.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.10.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.10.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.10.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.10.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.10.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.10.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.10.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.10.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.10.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.10.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.10.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.10.Title))</visible>
+		</item>
+		<item id="11">
+			<label>$INFO[Window(home).Property(RecentMovie.11.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.11.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.11.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.11.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.11.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.11.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.11.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.11.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.11.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.11.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.11.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.11.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.11.Title))</visible>
+		</item>
+		<item id="12">
+			<label>$INFO[Window(home).Property(RecentMovie.12.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.12.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.12.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.12.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.12.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.12.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.12.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.12.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.12.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.12.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.12.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.12.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.12.Title))</visible>
+		</item>
+		<item id="13">
+			<label>$INFO[Window(home).Property(RecentMovie.13.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.13.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.13.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.13.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.13.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.13.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.13.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.13.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.13.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.13.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.13.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.13.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.13.Title))</visible>
+		</item>
+		<item id="14">
+			<label>$INFO[Window(home).Property(RecentMovie.14.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.14.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.14.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.14.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.14.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.14.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.14.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.14.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.14.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.14.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.14.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.14.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.14.Title))</visible>
+		</item>
+		<item id="15">
+			<label>$INFO[Window(home).Property(RecentMovie.15.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.15.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.15.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.15.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.15.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.15.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.15.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.15.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.15.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.15.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.15.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.15.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.15.Title))</visible>
+		</item>
+		<item id="16">
+			<label>$INFO[Window(home).Property(RecentMovie.16.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.16.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.16.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.16.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.16.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.16.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.16.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.16.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.16.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.16.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.16.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.16.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.16.Title))</visible>
+		</item>
+		<item id="17">
+			<label>$INFO[Window(home).Property(RecentMovie.17.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.17.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.17.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.17.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.17.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.17.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.17.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.17.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.17.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.17.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.17.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.17.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.17.Title))</visible>
+		</item>
+		<item id="18">
+			<label>$INFO[Window(home).Property(RecentMovie.18.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.18.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.18.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.18.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.18.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.18.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.18.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.18.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.18.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.18.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.18.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.18.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.18.Title))</visible>
+		</item>
+		<item id="19">
+			<label>$INFO[Window(home).Property(RecentMovie.19.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.19.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.19.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.19.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.19.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.19.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.19.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.19.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.19.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.19.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.19.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.19.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.19.Title))</visible>
+		</item>
+		<item id="20">
+			<label>$INFO[Window(home).Property(RecentMovie.20.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentMovie.20.Year)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentMovie.20.Art(fanart)]</property>
+			<property name="Genre">$INFO[Window(home).Property(RecentMovie.20.Genre)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentMovie.20.VideoResolution)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentMovie.20.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentMovie.20.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentMovie.20.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentMovie.20.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentMovie.20.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentMovie.20.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentMovie.20.Art(poster))]</icon>
+			<visible>!IsEmpty(Window(home).Property(RecentMovie.20.Title))</visible>
+		</item>
+
+	</include>
+
+	<include name="TV_Recent">
+
+		<item id="1">
+			<label>$INFO[Window(home).Property(RecentEpisode.1.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.1.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.1.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.1.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.1.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.1.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.1.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.1.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.1.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.1.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.1.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.1.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.1.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.1.Art(thumb))]</thumb>
+		</item>
+		<item id="2">
+			<label>$INFO[Window(home).Property(RecentEpisode.2.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.2.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.2.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.2.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.2.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.2.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.2.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.2.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.2.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.2.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.2.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.2.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.2.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.2.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.2.Title))</visible>
+		</item>
+		<item id="3">
+			<label>$INFO[Window(home).Property(RecentEpisode.3.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.3.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.3.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.3.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.3.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.3.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.3.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.3.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.3.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.3.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.3.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.3.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.3.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.3.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.3.Title))</visible>
+		</item>
+		<item id="4">
+			<label>$INFO[Window(home).Property(RecentEpisode.4.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.4.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.4.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.4.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.4.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.4.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.4.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.4.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.4.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.4.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.4.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.4.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.4.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.4.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.4.Title))</visible>
+		</item>
+		<item id="5">
+			<label>$INFO[Window(home).Property(RecentEpisode.5.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.5.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.5.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.5.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.5.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.5.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.5.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.5.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.5.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.5.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.5.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.5.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.5.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.5.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.5.Title))</visible>
+		</item>
+		<item id="6">
+			<label>$INFO[Window(home).Property(RecentEpisode.6.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.6.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.6.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.6.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.6.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.6.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.6.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.6.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.6.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.6.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.6.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.6.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.6.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.6.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.6.Title))</visible>
+		</item>
+		<item id="7">
+			<label>$INFO[Window(home).Property(RecentEpisode.7.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.7.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.7.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.7.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.7.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.7.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.7.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.7.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.7.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.7.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.7.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.7.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.7.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.7.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.7.Title))</visible>
+		</item>
+		<item id="8">
+			<label>$INFO[Window(home).Property(RecentEpisode.8.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.8.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.8.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.8.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.8.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.8.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.8.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.8.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.8.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.8.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.8.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.8.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.8.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.8.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.8.Title))</visible>
+		</item>
+		<item id="9">
+			<label>$INFO[Window(home).Property(RecentEpisode.9.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.9.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.9.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.9.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.9.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.9.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.9.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.9.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.9.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.9.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.9.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.9.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.9.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.9.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.9.Title))</visible>
+		</item>
+		<item id="10">
+			<label>$INFO[Window(home).Property(RecentEpisode.10.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.10.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.10.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.10.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.10.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.10.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.10.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.10.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.10.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.10.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.10.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.10.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.10.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.10.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.10.Title))</visible>
+		</item>
+		<item id="11">
+			<label>$INFO[Window(home).Property(RecentEpisode.11.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.11.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.11.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.11.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.11.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.11.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.11.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.11.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.11.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.11.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.11.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.11.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.11.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.11.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.11.Title))</visible>
+		</item>
+		<item id="12">
+			<label>$INFO[Window(home).Property(RecentEpisode.12.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.12.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.12.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.12.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.12.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.12.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.12.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.12.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.12.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.12.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.12.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.12.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.12.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.12.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.12.Title))</visible>
+		</item>
+		<item id="13">
+			<label>$INFO[Window(home).Property(RecentEpisode.13.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.13.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.13.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.13.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.13.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.13.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.13.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.13.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.13.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.13.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.13.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.13.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.13.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.13.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.13.Title))</visible>
+		</item>
+		<item id="14">
+			<label>$INFO[Window(home).Property(RecentEpisode.14.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.14.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.14.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.14.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.14.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.14.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.14.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.14.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.14.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.14.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.14.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.14.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.14.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.14.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.14.Title))</visible>
+		</item>
+		<item id="15">
+			<label>$INFO[Window(home).Property(RecentEpisode.15.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.15.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.15.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.15.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.15.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.15.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.15.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.15.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.15.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.15.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.15.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.15.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.15.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.15.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.15.Title))</visible>
+		</item>
+		<item id="16">
+			<label>$INFO[Window(home).Property(RecentEpisode.16.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.16.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.16.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.16.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.16.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.16.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.16.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.16.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.16.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.16.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.16.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.16.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.16.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.16.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.16.Title))</visible>
+		</item>
+		<item id="17">
+			<label>$INFO[Window(home).Property(RecentEpisode.17.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.17.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.17.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.17.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.17.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.17.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.17.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.17.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.17.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.17.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.17.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.17.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.17.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.17.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.17.Title))</visible>
+		</item>
+		<item id="18">
+			<label>$INFO[Window(home).Property(RecentEpisode.18.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.18.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.18.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.18.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.18.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.18.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.18.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.18.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.18.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.18.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.18.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.18.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.18.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.18.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.18.Title))</visible>
+		</item>
+		<item id="19">
+			<label>$INFO[Window(home).Property(RecentEpisode.19.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.19.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.19.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.19.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.19.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.19.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.19.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.19.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.19.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.19.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.19.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.19.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.19.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.19.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.19.Title))</visible>
+		</item>
+		<item id="20">
+			<label>$INFO[Window(home).Property(RecentEpisode.20.Title)]</label>
+			<label2>$INFO[Window(home).Property(RecentEpisode.20.TVShowTitle)]</label2>
+			<property name="Fanart">$INFO[Window(home).Property(RecentEpisode.20.Art(tvshow.fanart))]</property>
+			<property name="EpisodeNo">$INFO[Window(home).Property(RecentEpisode.20.EpisodeNo)]</property>
+			<property name="VideoResolution">$INFO[Window(home).Property(RecentEpisode.20.VideoResolution)]</property>
+			<property name="VideoCodec">$INFO[Window(home).Property(RecentEpisode.20.VideoCodec)]</property>
+			<property name="Studio">$INFO[Window(home).Property(RecentEpisode.20.Studio)]</property>
+			<property name="Rating">$INFO[Window(home).Property(RecentEpisode.20.Rating)]</property>
+			<property name="File">$INFO[Window(home).Property(RecentEpisode.20.File)]</property>
+			<property name="AudioCodec">$INFO[Window(home).Property(RecentEpisode.20.AudioCodec)]</property>
+			<property name="AudioChannels">$INFO[Window(home).Property(RecentEpisode.20.AudioChannels)]</property>
+			<onclick>PlayMedia($ESCINFO[Window(home).Property(RecentEpisode.20.File)])</onclick>
+			<icon>$INFO[Window(home).Property(RecentEpisode.20.Art(tvshow.poster))]</icon>
+			<thumb>$INFO[Window(home).Property(RecentEpisode.20.Art(thumb))]</thumb>
+			<visible>!IsEmpty(Window(home).Property(RecentEpisode.20.Title))</visible>
+		</item>
+
+	</include>
+
+</includes>

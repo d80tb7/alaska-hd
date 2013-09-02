@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<include name="Viewtype_503_Episode">
+
+		<control type="group">
+			<visible>Control.IsVisible(503)</visible>
+
+			<!-- Browser -->
+
+			<control type="group" id="5000">
+				<posy>Offset_Value</posy>
+				<include>Animation_ZoomInZoomOut</include>
+				<include>Animation_ZoomedByMenu</include>
+				<include>Animation_HiddenByInfo</include>
+				<include>Animation_EpisodeFloat</include>
+
+				<control type="list" id="503">
+					<posx>380</posx>
+					<posy>146</posy>
+					<width>1490</width>
+					<height>656</height>
+					<onup>503</onup>
+					<ondown>503</ondown>
+					<onleft>7000</onleft>
+					<onright>7000</onright>
+					<scrolltime>0</scrolltime>
+					<pagecontrol>61</pagecontrol>
+					<orientation>vertical</orientation>
+					<viewtype label="20359">list</viewtype>
+					<visible>Container.Content(episodes) | Container.Content(musicvideos)</visible>
+
+					<itemlayout width="1306" height="80">
+						<control type="label">
+							<posx>160</posx>
+							<posy>24</posy>
+							<width>150</width>
+							<height>62</height>
+							<align>right</align>
+							<label>$VAR[Episode_Number]</label>
+							<font>Font_Black_Caps_62</font>
+							<textcolor>Medium</textcolor>
+						</control>
+						<control type="label">
+							<posx>204</posx>
+							<posy>20</posy>
+							<width>1186</width>
+							<height>42</height>
+							<label>$VAR[Title_Detail]</label>
+							<font>Font_Black_Caps_42</font>
+							<textcolor>Heavy</textcolor>
+							<animation effect="slide" end="0,14" condition="IsEmpty(ListItem.Date) + IsEmpty(ListItem.Duration)">Conditional</animation>
+						</control>
+						<control type="label">
+							<posx>204</posx>
+							<posy>58</posy>
+							<width>1186</width>
+							<height>32</height>
+							<label>$VAR[Date_Prefix]$INFO[ListItem.Date]$VAR[Episode_Insert]$INFO[ListItem.Duration,, $LOCALIZE[31118]]</label>
+							<font>Font_Light_Caps_32</font>
+							<textcolor>Medium</textcolor>
+						</control>			
+					</itemlayout>
+
+					<focusedlayout width="1306" height="246">
+						<control type="image">
+							<posx>38</posx>
+							<posy>30</posy>
+							<width>379</width>
+							<height>208</height>
+							<texture>$INFO[ListItem.ActualIcon]</texture>
+							<aspectratio align="center">keep</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="208,123" start="50" end="100" time="200" tween="cubic" easing="out" />
+								<effect type="fade" start="0" end="100" time="200" />
+							</animation>
+							<visible>SubString(ListItem.Icon,Default)</visible>
+						</control>
+						<control type="group">
+							<visible>!SubString(ListItem.Icon,Default)</visible>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="208,123" start="50" end="100" time="200" tween="cubic" easing="out" />
+								<effect type="fade" start="0" end="100" time="200" />
+							</animation>
+							<control type="image">
+								<posx>19</posx>
+								<posy>11</posy>
+								<width>417</width>
+								<height>246</height>
+								<texture>episode/Episode_Frame.png</texture>					
+							</control>
+							<control type="image">
+								<posx>38</posx>
+								<posy>30</posy>
+								<width>379</width>
+								<height>208</height>
+								<texture diffuse="episode/Episode_Matte.png">$INFO[ListItem.Icon]</texture>
+								<aspectratio scalediffuse="false">scale</aspectratio>
+							</control>
+						</control>
+						<control type="group">
+							<animation type="Focus" reversible="false">
+								<effect type="fade" start="0" end="100" time="200" />
+							</animation>
+							<animation effect="slide" end="0,68" condition="IsEmpty(ListItem.Plot)">Conditional</animation>
+							<control type="fadelabel">
+								<posx>478</posx>
+								<posy>47</posy>
+								<width>1012</width>
+								<height>46</height>
+								<label>$VAR[Episode_Number,,. ]$VAR[Title_Detail]</label>
+								<font>Font_Black_Caps_46</font>
+								<textcolor>Heavy</textcolor>
+							</control>
+						</control>
+					</focusedlayout>
+
+				</control>
+
+				<!-- Plot label -->
+
+				<control type="textbox">
+					<posx>858</posx>
+					<posy>246</posy>
+					<width>818</width>
+					<height>120</height>
+					<align>left</align>
+					<info>Container(503).ListItem.Plot</info>
+					<font>Font_Light_34</font>
+					<textcolor>Heavy</textcolor>
+					<include>Animation_EpisodePlot</include>
+					<visible>!Container(503).OnNext + !Container(503).OnPrevious</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+					<autoscroll time="3600" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
+				</control>
+
+			</control>
+
+		</control>
+
+	</include>
+
+</includes>
+

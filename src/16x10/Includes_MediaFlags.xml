@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<include name="MediaFlagsVars">
+		<width>134</width>
+		<height>91</height>
+		<aspectratio aligny="center">keep</aspectratio>
+		<colordiffuse>MediaFlags</colordiffuse>
+	</include>
+
+	<include name="VideoMediaFlags">
+		<control type="grouplist">
+			<posx>1246</posx>
+			<posy>812</posy>
+			<width>608</width>
+			<height>91</height>
+			<itemgap>24</itemgap>
+			<orientation>horizontal</orientation>
+			<visible>!ListItem.IsFolder + [SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,special://) | SubString(Container.FolderPath,library://)] + ![IsEmpty(ListItem.VideoResolution) + IsEmpty(ListItem.AudioCodec) + IsEmpty(ListItem.AudioChannels)]</visible>
+
+			<!-- Studio flag -->
+
+			<control type="image">
+				<visible>!Skin.HasSetting(SwapStudio_Rating)</visible>
+				<include>MediaFlagsVars</include>
+				<texture fallback="flags/default.png">$INFO[ListItem.Studio,flags/studio/,.png]</texture>
+			</control>
+
+			<!-- Rating flag -->
+
+			<control type="group">
+				<width>134</width>
+				<height>91</height>
+				<visible>Skin.HasSetting(SwapStudio_Rating)</visible>
+				<control type="image">
+					<include>MediaFlagsVars</include>
+					<texture>flags/rating.png</texture>
+				</control>
+				<control type="label">
+					<width>134</width>
+					<height>91</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label fallback="?">$INFO[ListItem.Rating]</label>
+					<textcolor>MediaFlags</textcolor>
+					<font>Font_Cond_64</font>
+				</control>
+			</control>
+
+			<!-- Source flag -->
+
+			<control type="image">
+				<include>MediaFlagsVars</include>
+				<texture>$VAR[Video_Source].png</texture>
+			</control>
+
+			<!-- Resolution flag -->
+
+			<control type="image">
+				<include>MediaFlagsVars</include>
+				<texture fallback="flags/resolution/default.png">$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
+			</control>
+
+			<!-- Audio flag -->
+
+			<control type="group">
+				<width>134</width>
+				<height>91</height>
+				<control type="image">
+					<include>MediaFlagsVars</include>
+					<texture fallback="flags/defaultsound.png">$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
+				</control>
+				<control type="image">
+					<include>MediaFlagsVars</include>
+					<texture>$INFO[ListItem.AudioChannels,flags/audio/,ch.png]</texture>
+				</control>
+			</control>
+
+		</control>
+	</include>
+
+</includes>

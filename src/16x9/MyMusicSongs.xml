@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="501">
+	<backgroundcolor>0</backgroundcolor>
+	<allowoverlay>true</allowoverlay>
+	<defaultcontrol always="true">500</defaultcontrol>
+	<views>500</views>
+
+	<controls>
+
+		<!-- Background -->
+
+		<include>Global_Background</include>
+
+		<!-- Views -->
+
+		<include>Viewtype_500_List</include>
+
+		<!-- Filter -->
+
+		<include>Global_ContextFilter</include>
+
+		<!-- Menu -->
+
+		<control type="group">
+			<posy>Offset_Value</posy>
+
+			<control type="fixedlist" id="7000">
+				<posx>-180</posx>
+				<posy>432</posy>
+				<width>2240</width>
+				<height>524</height>
+				<onup>500</onup>
+				<ondown>500</ondown>
+				<onleft>noop</onleft>
+				<onright>noop</onright>
+				<viewtype>list</viewtype>
+				<focusposition>3</focusposition>
+				<orientation>horizontal</orientation>
+				<include>Animation_ZoomInMenu</include>
+				<defaultcontrol always="true">1</defaultcontrol>
+				<scrolltime tween="sine" easing="out">320</scrolltime>
+				<visible allowhiddenfocus="true">Control.HasFocus(7000) + !Window.IsActive(shutdownmenu) + !Window.IsActive(DialogYesNo.xml) + !Window.IsActive(progressdialog) + !Window.IsActive(okdialog)</visible>
+				<itemlayout width="300" height="524">
+					<control type="label">
+						<posx>0</posx>
+						<posy>22</posy>
+						<width>280</width>
+						<height>30</height>
+						<info>ListItem.Label</info>
+						<font>Font_Reg_Caps_Bold_28</font>
+						<textcolor>Light</textcolor>
+					</control>
+					<control type="textbox">
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>280</width>
+						<height>108</height>
+						<info>ListItem.Label2</info>
+						<font>Font_Black_Caps_44</font>
+						<autoscroll>false</autoscroll>
+						<textcolor>Light</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout width="620" height="524">
+					<control type="group">
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="240,60" start="60" end="100" time="200" tween="cubic" easing="out" />
+							<effect type="fade" start="40" end="100" time="200" />
+						</animation>
+						<control type="label">
+							<posx>240</posx>
+							<width>400</width>
+							<height>44</height>
+							<align>center</align>
+							<info>ListItem.Label</info>
+							<font>Font_Reg_Caps_Bold_44</font>
+							<textcolor>MedLight</textcolor>
+						</control>
+						<control type="textbox">
+							<posx>-10</posx>
+							<posy>32</posy>
+							<width>500</width>
+							<height>188</height>
+							<align>center</align>
+							<info>ListItem.Label2</info>
+							<font>Font_Black_Caps_76</font>
+							<autoscroll>false</autoscroll>
+							<textcolor>Medium</textcolor>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+					<!-- Viewmode -->
+					<item id="1">
+						<onclick>Container.NextViewMode</onclick>
+						<label>31119</label>
+						<label2>$INFO[Container.ViewMode]</label2>
+					</item>
+					<!-- Sort by -->
+					<item id="3">
+						<onclick>SendClick(3)</onclick>
+						<label>31110</label>
+						<label2>$INFO[Container.SortMethod]</label2>
+						<visible>Control.IsEnabled(3)</visible>
+					</item>
+					<!-- Order by -->
+					<item id="4">
+						<onclick>SendClick(4)</onclick>
+						<label>31111</label>
+						<label2>$INFO[Control.GetLabel(4)]</label2>
+						<visible>Control.IsEnabled(4)</visible>
+					</item>
+				</content>
+			</control>
+
+		</control>
+
+		<!-- Hidden buttons for Menu -->
+
+		<control type="button" id="3">
+			<include>HiddenControl</include>
+		</control>
+		<control type="togglebutton" id="4">
+			<label>584</label>
+			<altlabel>585</altlabel>
+			<include>HiddenControl</include>
+		</control>
+
+	</controls>
+
+</window>

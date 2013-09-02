@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<!-- Common animations -->
+
+	<include name="Animation_CommonFade">
+		<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+	</include>
+
+	<include name="Animation_BackdropFade">
+		<animation effect="fade" start="0" end="100" time="800">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+	</include>
+
+	<include name="Animation_CommonFadeNoHide">
+		<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+	</include>
+
+	<include name="Animation_CommonFadeIn">
+		<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+		<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+	</include>
+
+	<!-- Window transition animations -->
+
+	<include name="Animation_ZoomOutZoomIn">
+		<animation type="WindowOpen">
+			<effect type="zoom" time="400" center="960,540" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" center="960,540" start="0" end="100" tween="cubic" easing="out" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="960,540" start="100" end="180" tween="cubic" easing="in" />
+			<effect type="fade" time="400" center="960,540" start="100" end="0" tween="cubic" easing="out" />
+		</animation>
+	</include>
+
+	<include name="Animation_ZoomInZoomOut">
+		<animation type="WindowOpen">
+			<effect type="zoom" time="400" center="960,540" start="50" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" center="960,540" start="0" end="100" tween="cubic" easing="out" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="960,540" start="100" end="50" tween="cubic" easing="in" />
+			<effect type="fade" time="400" center="960,540" start="100" end="0" />
+		</animation>
+	</include>
+
+	<include name="Animation_ZoomedByMenu">
+		<animation type="Conditional" condition="!ControlGroup(5000).HasFocus | Window.IsActive(contextmenu) | Window.IsActive(shutdownmenu) | Window.IsActive(filebrowser) | Window.IsActive(DialogSelect.xml) | Window.IsActive(DialogYesNo.xml) | Window.IsActive(progressdialog) | Window.IsActive(okdialog)">
+			<effect type="zoom" time="600" center="960,540" start="100" end="76" tween="cubic" easing="inout" />
+		</animation>
+	</include>
+
+	<include name="Animation_ZoomInMenu">
+		<animation type="Visible">
+			<effect delay="200" type="zoom" time="600" center="960,540" start="50" end="100" tween="cubic" easing="out" />
+			<effect delay="200" type="fade" time="600" start="0" end="100" tween="cubic" easing="out" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="fade" time="200" start="100" end="0" />
+		</animation>
+		<animation type="WindowOpen">
+			<effect delay="200" type="zoom" time="600" center="960,540" start="50" end="100" tween="cubic" easing="out" />
+			<effect delay="200" type="fade" time="600" start="0" end="100" tween="cubic" easing="out" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" time="200" start="100" end="0" />
+		</animation>
+	</include>
+
+	<include name="Animation_SlideUpFadeOut">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="slide" start="0,100" end="0,0" time="400" tween="cubic" easing="out" />
+			<effect type="fade" start="0" end="100" time="400" tween="cubic" easing="out" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="200" />
+		</animation>
+	</include>
+
+	<include name="Animation_SlideDownFadeOut">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="slide" start="0,-100" end="0,0" time="400" tween="cubic" easing="out" />
+			<effect type="fade" start="0" end="100" time="400" tween="cubic" easing="out" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="200" />
+		</animation>
+	</include>
+
+	<!-- Info dialog animations -->
+
+	<include name="Animation_HiddenByInfo">
+		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(addoninformation)">Conditional</animation>
+	</include>
+
+	<include name="Animation_PosterInfoSlide">
+		<animation type="Hidden" reversible="false">
+			<effect type="fade" start="100" end="0" time="0" />
+		</animation>
+		<animation type="Visible" reversible="false">
+			<effect type="slide" start="-338,0" end="0,0" time="400" tween="cubic" easing="inout" reversible="false" />
+		</animation>
+	</include>
+
+	<!-- Browser animations -->
+
+	<include name="Animation_EpisodeFloat">
+		<animation effect="slide" end="0,12" time="200" condition="Container(503).Row(0)">Conditional</animation>
+		<animation effect="slide" end="0,6" time="200" condition="Container(503).Row(1)">Conditional</animation>
+		<animation effect="slide" end="0,0" time="200" condition="Container(503).Row(2)">Conditional</animation>
+		<animation effect="slide" end="0,-6" time="200" condition="Container(503).Row(3)">Conditional</animation>
+		<animation effect="slide" end="0,-12" time="200" condition="Container(503).Row(4)">Conditional</animation>
+		<animation effect="slide" end="0,-18" time="200" condition="Container(503).Row(5)">Conditional</animation>
+	</include>
+
+	<include name="Animation_EpisodePlot">
+		<animation effect="slide" end="0,80" time="0" condition="Container(503).Row(1)">Conditional</animation>
+		<animation effect="slide" end="0,160" time="0" condition="Container(503).Row(2)">Conditional</animation>
+		<animation effect="slide" end="0,240" time="0" condition="Container(503).Row(3)">Conditional</animation>
+		<animation effect="slide" end="0,320" time="0" condition="Container(503).Row(4)">Conditional</animation>
+		<animation effect="slide" end="0,400" time="0" condition="Container(503).Row(5)">Conditional</animation>
+	</include>
+
+	<include name="Animation_PictureGridFloat">
+		<animation effect="slide" end="0,10" time="400" tween="cubic" easing="inout" condition="Container(50).Row(0)">Conditional</animation>
+		<animation effect="slide" end="0,0" time="400" tween="cubic" easing="inout" condition="Container(50).Row(1)">Conditional</animation>
+		<animation effect="slide" end="0,-10" time="400" tween="cubic" easing="inout" condition="Container(50).Row(2)">Conditional</animation>
+		<animation effect="slide" end="0,-20" time="400" tween="cubic" easing="inout" condition="Container(50).Row(3)">Conditional</animation>
+	</include>
+
+	<include name="Animation_WallFloat">
+		<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="Container(511).Row(0) | Container(521).Row(0)">Conditional</animation>
+		<animation effect="slide" end="0,-300" time="300" tween="cubic" easing="inout" condition="Container(511).Row(1) | Container(521).Row(1)">Conditional</animation>
+		<animation effect="slide" end="0,-600" time="300" tween="cubic" easing="inout" condition="Container(511).Row(2) | Container(521).Row(2)">Conditional</animation>
+	</include>
+
+	<include name="Animation_WallArrowFloat">
+		<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="Container(511).Row(0) | Container(521).Row(0)">Conditional</animation>
+		<animation effect="slide" end="0,38" time="300" tween="cubic" easing="inout" condition="Container(511).Row(1) | Container(521).Row(1)">Conditional</animation>
+		<animation effect="slide" end="0,76" time="300" tween="cubic" easing="inout" condition="Container(511).Row(2) | Container(521).Row(2)">Conditional</animation>
+	</include>
+
+	<include name="Animation_ListFloat">
+		<animation effect="slide" end="0,160" time="200" condition="Container(53).Row(0)">Conditional</animation>
+		<animation effect="slide" end="0,120" time="200" condition="Container(53).Row(1)">Conditional</animation>
+		<animation effect="slide" end="0,80" time="200" condition="Container(53).Row(2)">Conditional</animation>
+		<animation effect="slide" end="0,40" time="200" condition="Container(53).Row(3)">Conditional</animation>
+		<animation effect="slide" end="0,0" time="200" condition="Container(53).Row(4)">Conditional</animation>
+		<animation effect="slide" end="0,-40" time="200" condition="Container(53).Row(5)">Conditional</animation>
+		<animation effect="slide" end="0,-80" time="200" condition="Container(53).Row(6)">Conditional</animation>
+		<animation effect="slide" end="0,-120" time="200" condition="Container(53).Row(7)">Conditional</animation>
+		<animation effect="slide" end="0,-160" time="200" condition="Container(53).Row(8)">Conditional</animation>
+		<animation effect="slide" end="0,-200" time="200" condition="Container(53).Row(9)">Conditional</animation>
+		<animation effect="slide" end="0,-240" time="200" condition="Container(53).Row(10)">Conditional</animation>
+		<animation effect="slide" end="0,-280" time="200" condition="Container(53).Row(11)">Conditional</animation>
+		<animation effect="slide" end="0,-320" time="200" condition="Container(53).Row(12)">Conditional</animation>
+		<animation effect="slide" end="0,-360" time="200" condition="Container(53).Row(13)">Conditional</animation>
+		<animation effect="slide" end="0,-400" time="200" condition="Container(53).Row(14)">Conditional</animation>
+		<animation effect="slide" end="0,-440" time="200" condition="Container(53).Row(15)">Conditional</animation>
+		<animation effect="slide" end="0,-480" time="200" condition="Container(53).Row(16)">Conditional</animation>
+		<animation effect="slide" end="0,-520" time="200" condition="Container(53).Row(17)">Conditional</animation>
+		<animation effect="slide" end="0,-560" time="200" condition="Container(53).Row(18)">Conditional</animation>
+		<animation effect="slide" end="0,-600" time="200" condition="Container(53).Row(19)">Conditional</animation>
+	</include>
+
+	<!-- Settings animations -->
+
+	<include name="Animation_SettingsFloat">
+		<animation effect="slide" end="600,0" time="300" tween="cubic" easing="inout" condition="Container(60).Column(0)">Conditional</animation>
+		<animation effect="slide" end="300,0" time="300" tween="cubic" easing="inout" condition="Container(60).Column(1)">Conditional</animation>
+		<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="Container(60).Column(2)">Conditional</animation>
+		<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="Container(60).Row(0)">Conditional</animation>
+		<animation effect="slide" end="0,-300" time="300" tween="cubic" easing="inout" condition="Container(60).Row(1)">Conditional</animation>
+		<animation effect="slide" end="0,-600" time="300" tween="cubic" easing="inout" condition="Container(60).Row(2)">Conditional</animation>
+		<animation effect="slide" end="0,-900" time="300" tween="cubic" easing="inout" condition="Container(60).Row(3)">Conditional</animation>
+	</include>
+
+	<!-- Home animations -->
+
+	<include name="Animation_HomeSlide">
+		<animation effect="slide" end="0,0" time="300" condition="Container(310).Position(0)">Conditional</animation>
+		<animation effect="slide" end="-528,0" time="300" condition="Container(310).Position(1)">Conditional</animation>
+		<animation effect="slide" end="-1056,0" time="300" condition="Container(310).Position(2)">Conditional</animation>
+		<animation effect="slide" end="-1584,0" time="300" condition="Container(310).Position(3)">Conditional</animation>
+		<animation effect="slide" end="-2112,0" time="300" condition="Container(310).Position(4)">Conditional</animation>
+		<animation effect="slide" end="-2640,0" time="300" condition="Container(310).Position(5)">Conditional</animation>
+		<animation effect="slide" end="-3168,0" time="300" condition="Container(310).Position(6)">Conditional</animation>
+		<animation effect="slide" end="-3696,0" time="300" condition="Container(310).Position(7)">Conditional</animation>
+		<animation effect="slide" end="-4224,0" time="300" condition="Container(310).Position(8)">Conditional</animation>
+		<animation effect="slide" end="-4752,0" time="300" condition="Container(310).Position(9)">Conditional</animation>
+		<animation effect="slide" end="-5280,0" time="300" condition="Container(310).Position(10)">Conditional</animation>
+		<animation effect="slide" end="-5808,0" time="300" condition="Container(310).Position(11)">Conditional</animation>
+		<animation effect="slide" end="-6336,0" time="300" condition="Container(310).Position(12)">Conditional</animation>
+		<animation effect="slide" end="-6864,0" time="300" condition="Container(310).Position(13)">Conditional</animation>
+	</include>
+
+	<!-- Context menu animations -->
+
+	<include name="Animation_ContextMenuSlide">
+		<animation effect="slide" end="0,76" time="0" condition="!Control.IsVisible(990)">Conditional</animation>
+		<animation effect="slide" end="0,0" time="200" condition="ControlGroup(996).HasFocus(990)">Conditional</animation>
+		<animation effect="slide" end="0,-76" time="200" condition="ControlGroup(996).HasFocus(1001)">Conditional</animation>
+		<animation effect="slide" end="0,-152" time="200" condition="ControlGroup(996).HasFocus(1002)">Conditional</animation>
+		<animation effect="slide" end="0,-228" time="200" condition="ControlGroup(996).HasFocus(1003)">Conditional</animation>
+		<animation effect="slide" end="0,-304" time="200" condition="ControlGroup(996).HasFocus(1004)">Conditional</animation>
+		<animation effect="slide" end="0,-380" time="200" condition="ControlGroup(996).HasFocus(1005)">Conditional</animation>
+		<animation effect="slide" end="0,-456" time="200" condition="ControlGroup(996).HasFocus(1006)">Conditional</animation>
+		<animation effect="slide" end="0,-532" time="200" condition="ControlGroup(996).HasFocus(1007)">Conditional</animation>
+		<animation effect="slide" end="0,-608" time="200" condition="ControlGroup(996).HasFocus(1008)">Conditional</animation>
+		<animation effect="slide" end="0,-684" time="200" condition="ControlGroup(996).HasFocus(1009)">Conditional</animation>
+		<animation effect="slide" end="0,-760" time="200" condition="ControlGroup(996).HasFocus(1010)">Conditional</animation>
+		<animation effect="slide" end="0,-836" time="200" condition="ControlGroup(996).HasFocus(1011)">Conditional</animation>
+		<animation effect="slide" end="0,-912" time="200" condition="ControlGroup(996).HasFocus(1012)">Conditional</animation>
+		<animation effect="slide" end="0,-988" time="200" condition="ControlGroup(996).HasFocus(1013)">Conditional</animation>
+		<animation effect="slide" end="0,-1064" time="200" condition="ControlGroup(996).HasFocus(1014)">Conditional</animation>
+	</include>
+
+	<!-- Shutdown menu animations -->
+
+	<include name="Animation_ShutdownMenuSlide">
+		<animation effect="slide" end="0,0" time="200" condition="Container(3200).Position(0)">Conditional</animation>
+		<animation effect="slide" end="0,-76" time="200" condition="Container(3200).Position(1)">Conditional</animation>
+		<animation effect="slide" end="0,-152" time="200" condition="Container(3200).Position(2)">Conditional</animation>
+		<animation effect="slide" end="0,-228" time="200" condition="Container(3200).Position(3)">Conditional</animation>
+		<animation effect="slide" end="0,-304" time="200" condition="Container(3200).Position(4)">Conditional</animation>
+		<animation effect="slide" end="0,-380" time="200" condition="Container(3200).Position(5)">Conditional</animation>
+		<animation effect="slide" end="0,-456" time="200" condition="Container(3200).Position(6)">Conditional</animation>
+		<animation effect="slide" end="0,-532" time="200" condition="Container(3200).Position(7)">Conditional</animation>
+		<animation effect="slide" end="0,-608" time="200" condition="Container(3200).Position(8)">Conditional</animation>
+		<animation effect="slide" end="0,-684" time="200" condition="Container(3200).Position(9)">Conditional</animation>
+		<animation effect="slide" end="0,-760" time="200" condition="Container(3200).Position(10)">Conditional</animation>
+	</include>
+
+</includes>

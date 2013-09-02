@@ -1,0 +1,575 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/svn/!svn/ver/2/trunk/16x9
+END
+DialogButtonMenu.xml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/16x9/DialogButtonMenu.xml
+END
+PlayerControls.xml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/16x9/PlayerControls.xml
+END
+Pointer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/2/trunk/16x9/Pointer.xml
+END
+Viewtype_511_Music_Wall.xml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/16x9/Viewtype_511_Music_Wall.xml
+END
+Includes_MediaFlags.xml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/16x9/Includes_MediaFlags.xml
+END
+FileBrowser.xml
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2/trunk/16x9/FileBrowser.xml
+END
+DialogFileStacking.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/16x9/DialogFileStacking.xml
+END
+DialogProgress.xml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/16x9/DialogProgress.xml
+END
+MusicOSD.xml
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2/trunk/16x9/MusicOSD.xml
+END
+DialogTextViewer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/16x9/DialogTextViewer.xml
+END
+Viewtype_502_Poster_Wrap.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/16x9/Viewtype_502_Poster_Wrap.xml
+END
+DialogMuteBug.xml
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2/trunk/16x9/DialogMuteBug.xml
+END
+AddonBrowser.xml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2/trunk/16x9/AddonBrowser.xml
+END
+DialogOk.xml
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2/trunk/16x9/DialogOk.xml
+END
+Viewtype_513_Banner.xml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/16x9/Viewtype_513_Banner.xml
+END
+MyVideoPlaylist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/16x9/MyVideoPlaylist.xml
+END
+SettingsCategory.xml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/16x9/SettingsCategory.xml
+END
+MyPrograms.xml
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/2/trunk/16x9/MyPrograms.xml
+END
+DialogVideoInfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/16x9/DialogVideoInfo.xml
+END
+Custom_Viewtype_Movie_Recent.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/16x9/Custom_Viewtype_Movie_Recent.xml
+END
+DialogPictureInfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/16x9/DialogPictureInfo.xml
+END
+MyVideoNav.xml
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/2/trunk/16x9/MyVideoNav.xml
+END
+DialogAddonSettings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/16x9/DialogAddonSettings.xml
+END
+Viewtype_521_Addon_Wall.xml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/16x9/Viewtype_521_Addon_Wall.xml
+END
+DialogContextMenu.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/16x9/DialogContextMenu.xml
+END
+MyMusicNav.xml
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/2/trunk/16x9/MyMusicNav.xml
+END
+MusicVisualisation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/16x9/MusicVisualisation.xml
+END
+Viewtype_500_List.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/16x9/Viewtype_500_List.xml
+END
+DialogAlbumInfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/16x9/DialogAlbumInfo.xml
+END
+MyMusicSongs.xml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2/trunk/16x9/MyMusicSongs.xml
+END
+SlideShow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2/trunk/16x9/SlideShow.xml
+END
+DialogSlider.xml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2/trunk/16x9/DialogSlider.xml
+END
+MusicKaraokeLyrics.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/16x9/MusicKaraokeLyrics.xml
+END
+Font.xml
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/2/trunk/16x9/Font.xml
+END
+VideoOverlay.xml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2/trunk/16x9/VideoOverlay.xml
+END
+FileManager.xml
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2/trunk/16x9/FileManager.xml
+END
+DialogVolumeBar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/16x9/DialogVolumeBar.xml
+END
+DialogYesNo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2/trunk/16x9/DialogYesNo.xml
+END
+DialogKeyboard.xml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/16x9/DialogKeyboard.xml
+END
+SettingsProfile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/16x9/SettingsProfile.xml
+END
+MusicOverlay.xml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2/trunk/16x9/MusicOverlay.xml
+END
+Viewtype_508_Landscape.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/16x9/Viewtype_508_Landscape.xml
+END
+VideoOSDBookmarks.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/16x9/VideoOSDBookmarks.xml
+END
+Custom_Viewtype_Movie_Watchlist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2/trunk/16x9/Custom_Viewtype_Movie_Watchlist.xml
+END
+Home.xml
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/2/trunk/16x9/Home.xml
+END
+VideoFullScreen.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/16x9/VideoFullScreen.xml
+END
+DialogSeekbar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2/trunk/16x9/DialogSeekbar.xml
+END
+DialogFullScreenInfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/16x9/DialogFullScreenInfo.xml
+END
+DialogSelect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2/trunk/16x9/DialogSelect.xml
+END
+DialogKaiToast.xml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/16x9/DialogKaiToast.xml
+END
+Viewtype_504_Fanart.xml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/16x9/Viewtype_504_Fanart.xml
+END
+DialogKaraokeSongSelectorLarge.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2/trunk/16x9/DialogKaraokeSongSelectorLarge.xml
+END
+Settings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2/trunk/16x9/Settings.xml
+END
+DialogSongInfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/16x9/DialogSongInfo.xml
+END
+Includes_Resolution_Diffs.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/trunk/16x9/Includes_Resolution_Diffs.xml
+END
+MyWeather.xml
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2/trunk/16x9/MyWeather.xml
+END
+Viewtype_510_Songs_List.xml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/16x9/Viewtype_510_Songs_List.xml
+END
+Includes.xml
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2/trunk/16x9/Includes.xml
+END
+DialogPeripheralManager.xml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/16x9/DialogPeripheralManager.xml
+END
+MyMusicPlaylist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/16x9/MyMusicPlaylist.xml
+END
+SettingsScreenCalibration.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/trunk/16x9/SettingsScreenCalibration.xml
+END
+Variables.xml
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2/trunk/16x9/Variables.xml
+END
+Viewtype_514_Season_Poster.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2/trunk/16x9/Viewtype_514_Season_Poster.xml
+END
+DialogContentSettings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/16x9/DialogContentSettings.xml
+END
+Viewtype_503_Episode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/16x9/Viewtype_503_Episode.xml
+END
+DialogSelect_bck.xml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/16x9/DialogSelect_bck.xml
+END
+MyMusicPlaylistEditor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/16x9/MyMusicPlaylistEditor.xml
+END
+SmartPlaylistEditor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/16x9/SmartPlaylistEditor.xml
+END
+DialogMediaSource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/16x9/DialogMediaSource.xml
+END
+DialogAddonInfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/16x9/DialogAddonInfo.xml
+END
+ProfileSettings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/16x9/ProfileSettings.xml
+END
+SettingsSystemInfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/16x9/SettingsSystemInfo.xml
+END
+DialogNumeric.xml
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2/trunk/16x9/DialogNumeric.xml
+END
+Viewtype_501_Poster_No_Wrap.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/16x9/Viewtype_501_Poster_No_Wrap.xml
+END
+DialogKaraokeSongSelector.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/trunk/16x9/DialogKaraokeSongSelector.xml
+END
+SkinSettings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2/trunk/16x9/SkinSettings.xml
+END
+Includes_Animations.xml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/16x9/Includes_Animations.xml
+END
+DialogExtendedProgressBar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/trunk/16x9/DialogExtendedProgressBar.xml
+END
+DialogNetworkSetup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/16x9/DialogNetworkSetup.xml
+END
+Includes_Widgets.xml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/16x9/Includes_Widgets.xml
+END
+DialogPeripheralSettings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/16x9/DialogPeripheralSettings.xml
+END
+VideoOSDSettings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/16x9/VideoOSDSettings.xml
+END
+SmartPlaylistRule.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/16x9/SmartPlaylistRule.xml
+END
+Custom_Viewtype_TV_Watchlist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/16x9/Custom_Viewtype_TV_Watchlist.xml
+END
+DialogBusy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/2/trunk/16x9/DialogBusy.xml
+END
+Startup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/2/trunk/16x9/Startup.xml
+END
+MyPics.xml
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2/trunk/16x9/MyPics.xml
+END
+Defaults.xml
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2/trunk/16x9/Defaults.xml
+END
+DialogFavourites.xml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/16x9/DialogFavourites.xml
+END
+LoginScreen.xml
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2/trunk/16x9/LoginScreen.xml
+END
+LockSettings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2/trunk/16x9/LockSettings.xml
+END
+VisualisationPresetList.xml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/16x9/VisualisationPresetList.xml
+END
+Custom_Overlay.xml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/16x9/Custom_Overlay.xml
+END
+VideoOSD.xml
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2/trunk/16x9/VideoOSD.xml
+END
+Custom_Viewtype_TV_Recent.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/trunk/16x9/Custom_Viewtype_TV_Recent.xml
+END
