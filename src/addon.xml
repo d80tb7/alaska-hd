@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.alaska.hd" version="0.0.5" name="Alaska HD" provider-name="Hitcher">
+<addon id="skin.alaska.hd" version="0.0.6" name="Alaska HD" provider-name="Hitcher">
 	<requires>
 		<import addon="xbmc.gui" version="4.0.0"/>
 		<import addon="service.skin.widgets" version="0.0.19"/>

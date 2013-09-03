@@ -1,18 +1,37 @@
-<project>
-    <target name="clean">
-        <delete dir="dist"/>
-	<delete dir="build"/>
-    </target>
+<project default="build">
+
+	<property name="project.name.base" value="skin.alaska.hd" />
+
+	<target name="clean">
+		<delete dir="dist" />
+		<delete dir="build" />
+	</target>
 
 
-    <target name="compile">
-        <mkdir dir="dist"/>
-	<mkdir dir="build"/>
-	<copy todir="build/skin.alaska.hd">
-           <fileset dir="src"/>
-        </copy>
-	<zip destfile="dist/skin.alaska.hd.zip"
-       		basedir="build/skin.alaska.hd"/>
-    </target>
- 
+	<target name="build" depends="clean">
+		<fail message="Property &quot;version&quot; needs to be set" unless="version" />
+		<property name="project.name" value="${project.name.base}-${version}"/>
+		<property name="zip.file.name" value="${project.name}.zip"/>
+		
+		<mkdir dir="dist" />
+		<mkdir dir="build" />
+
+		
+		<copy todir="build/${project.name}">
+			<fileset dir="src" />
+		</copy>
+		<copy todir="build/${project.name}/16x10">
+			<fileset dir="build/${project.name}/16x9">
+				<exclude name="Includes.xml" />
+			</fileset>
+		</copy>
+
+
+		<zip destfile="dist/${zip.file.name}">
+			<zipfileset dir="build">
+				<include name="${project.name}**/**" />
+			</zipfileset>
+		</zip>
+	</target>
+
 </project>

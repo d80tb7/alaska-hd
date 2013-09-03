@@ -1,5 +1,0 @@
-<window>
-	<onload>RunScript(script.tv.show.next.aired,silent=True)</onload>
-	<onunload condition="!Skin.HasSetting(HideHomeFavourites)">RunScript($VAR[Run_Favourites_Script])</onunload>
-	<onload>ReplaceWindow(Home)</onload>
-</window>
